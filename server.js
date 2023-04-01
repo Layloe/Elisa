@@ -54,4 +54,4 @@ app.post('/form', async (req, res) => {
 //Start server
 
 const port = process.env.PORT || 5000
-app.listen(port, () => console.log(`Server started on port ${port}`))
+app.listen(port, () => console.log(`Server started on port ${port}`)).on('error', (error) => console.log(error))
