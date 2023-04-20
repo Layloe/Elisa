@@ -1,57 +1,56 @@
+
+console.log('May the Node be with you')
+
 const express = require('express')
-const mongoose = require('mongoose')
-const cors = require('cors')
-require('dotenv').config()
-
-
 const app = express()
+const bodyParser = require('body-parser')
+const dotenv = require('dotenv')
+dotenv.config()
+const MongoClient = require('mongodb').MongoClient
+const mongoose = require('mongoose')
+const connectionString = process.env.DB_URI
 
-//middleware
-app.use(express.json())
-app.use(cors())
+MongoClient.connect(connectionString, { useUnifiedTopology: true })
+.then(client => {
+    console.log('MongoDB connection successful');
+    const db = client.db('crud')
+    const crudCollection = db.collection('crudPractice')
 
-//connect to DB
+    app.use(bodyParser.urlencoded({extended: true}))
 
-mongoose.connect(process.env.MONGODB_URI, {
-    useNewUrlParser:true,
-    useUnifiedTopology: true
+
+    app.get('/', (req, res) => {
+      crudCollection.find().toArray()
+        .then(results => {
+          console.log(results)
+        })
+      res.sendFile(__dirname + '/index.html')
+   })
+
+
+
+   app.post('/quotes',(req,res) => {
+    crudCollection.insertOne(req.body)
+      .then(results => {
+        console.log(results)
+        res.redirect('/')
+      })
+      .catch(error => console.error(error))
+    
+
+ })
+
+
+   app.listen(3000,function(){
+    console.log('listening on 3000')
 })
 
-.then(() => console.log('MongoDB connection successful'))
-.catch((err) => console.error(err))
-
-//Mongoose schema for form data
-const formDataSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    message: String,
-    // dayOfWeek: assignDayOfWeek(value.date),
-    // timeOfDay: getTimeOfDay(value.date),
-    // groupByDay: groupByDay(),
-    // groupByWeek: groupByWeek()
-
-})
-
-//Mongoose model for the form data
-const FormData = mongoose.model('FormData', formDataSchema)
-
-//route to handle form submissions
-app.post('/form', async (req, res) => {
-    try {
-        //create a new FormData object from the request body
-        const formData = new FormData(req.body)
-        //Save form data to db
-        await formData.save()
-        res.status(200).send('Form submitted successfully')
-    } catch (err) {
-        console.error(err)
-        res.status(500).send('Error submitting form')
-    }
-})
+  }).catch((error) => {
+    console.log('MongoDB connection error:', error);
+  })
 
 
 
-//Start server
 
-const port = process.env.PORT || 5000
-app.listen(port, () => console.log(`Server started on port ${port}`)).on('error', (error) => console.log(error))
+ 
+ 
