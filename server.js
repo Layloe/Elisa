@@ -17,32 +17,40 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     const crudCollection = db.collection('crudPractice')
 
     app.use(bodyParser.urlencoded({extended: true}))
+    app.use(express.static('client/build'));
 
-
-    app.get('/', (req, res) => {
+    app.get('/quotes', (req, res) => {
       crudCollection.find().toArray()
         .then(results => {
-          console.log(results)
+          res.json(results)
         })
-      res.sendFile(__dirname + '/index.html')
-   })
-
-
-
-   app.post('/quotes',(req,res) => {
-    crudCollection.insertOne(req.body)
-      .then(results => {
-        console.log(results)
-        res.redirect('/')
-      })
-      .catch(error => console.error(error))
+        .catch(error => {
+          console.error(error);
+          res.status(500).json({ message: 'Internal server error' })
+        })
+    })
+    
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+    })
     
 
- })
 
 
-   app.listen(3000,function(){
-    console.log('listening on 3000')
+//    app.post('/quotes',(req,res) => {
+//     crudCollection.insertOne(req.body)
+//       .then(results => {
+//         console.log(results)
+//         res.redirect('/')
+//       })
+//       .catch(error => console.error(error))
+    
+
+//  })
+
+
+app.listen(process.env.PORT || 5000, function() {
+  console.log('listening on port ' + process.env.PORT || 5000)
 })
 
   }).catch((error) => {
