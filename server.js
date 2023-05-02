@@ -8,6 +8,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 const MongoClient = require('mongodb').MongoClient
 const mongoose = require('mongoose')
+const path = require('path')
 const connectionString = process.env.DB_URI
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -31,26 +32,26 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     })
     
     app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, 'client/build', 'index.html'))
+      res.sendFile(path.join(__dirname, 'client', 'index.html'))
     })
     
 
 
 
-//    app.post('/quotes',(req,res) => {
-//     crudCollection.insertOne(req.body)
-//       .then(results => {
-//         console.log(results)
-//         res.redirect('/')
-//       })
-//       .catch(error => console.error(error))
+   app.post('/quotes',(req,res) => {
+    crudCollection.insertOne(req.body)
+      .then(results => {
+        console.log(results)
+        res.redirect('/')
+      })
+      .catch(error => console.error(error))
     
 
-//  })
+ })
 
 
-app.listen(process.env.PORT || 5000, function() {
-  console.log('listening on port ' + process.env.PORT || 5000)
+app.listen(process.env.PORT || 3000, function() {
+  console.log('listening on port ' + process.env.PORT || 3000)
 })
 
   }).catch((error) => {
