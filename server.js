@@ -39,7 +39,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
       crudCollection
         .insertOne(req.body)
         .then(results => {
-          console.log(results)
+          console.log(body)
           res.setHeader('Content-Type', 'application/json')
           res.json({ message: 'Quote added successfully' }); // Return a JSON response
         })
