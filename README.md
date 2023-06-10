@@ -170,3 +170,20 @@ Arrange:
 Act: Change the component List.js to fix the key property to render correctly. I also changed the list to display the name and quote property to display separately for readability.
 
 Assert: Verified that the server and react app started successfully with no errors, and verified list displays the name and quote separately.
+
+2023-06-10
+**Want to add a delete button to the list.
+Arrange: Don't know if I want to add the delete function as a component or just code it into List.js and server.js
+
+Act: I will just start coding and see if I get to work and go from there.
+Getting errors. I need to take a step back.
+
+Assert:
+*** I forgot to push my client to git, oof
+**Problem 2.
+Arrange: Problem: Getting err "a bootstrap:27 Uncaught Error: Cannot find module 'url'" in the DOM.
+         Solution: Google err and look at dev tools
+
+Act:
+
+Assert:

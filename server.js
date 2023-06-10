@@ -1,12 +1,13 @@
-console.log('May the Node be with you');
-const dotenv = require('dotenv');
-dotenv.config();
-const express = require('express');
-const app = express();
-const cors = require('cors');
-const MongoClient = require('mongodb').MongoClient;
-const mongoose = require('mongoose');
-const path = require('path');
+console.log('May the Node be with you')
+const dotenv = require('dotenv')
+dotenv.config()
+const express = require('express')
+const app = express()
+const cors = require('cors')
+const MongoClient = require('mongodb').MongoClient
+const { ObjectId } = require('mongodb')
+const mongoose = require('mongoose')
+const path = require('path')
 const connectionString = process.env.DB_URI 
 
 MongoClient.connect(connectionString, { useUnifiedTopology: true })
@@ -21,6 +22,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
     app.use(express.json()); // parse JSON request bodies
 
     app.get('/quotes', (req, res) => {
+
       crudCollection
         .find()
         .toArray()
@@ -31,20 +33,41 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
         })
         .catch(error => {
           console.error(error);
-          res.status(500).json({ message: 'Internal server error' });
+          res.status(500).json({ message: 'Internal server error' })
         });
     });
 
     app.post('/quotes', (req, res) => {
+
       crudCollection
         .insertOne(req.body)
         .then(results => {
-          console.log(body)
+          console.log(results)
           res.setHeader('Content-Type', 'application/json')
           res.json({ message: 'Quote added successfully' }); // Return a JSON response
         })
         .catch(error => console.error(error));
-    });
+    })
+
+    app.delete('/quotes/:id', (req,res) => {
+      const quoteId = req.params.id
+
+      crudCollection
+      .deleteOne({ _id: ObjectId(quoteId)})
+      .then((result) => {
+        if (result.deletedCount === 0) {
+          res.status(404).json({message: 'No, no, no; quote not here'})
+        }else {
+          res.setHeader('Content-Type', 'application/json')
+          res.json({message: 'I say BYE! BYE!'})
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+      })
+    })
+
 
     // app.get('*', (req, res) => {
     //   res.setHeader('Content-Type', 'application/json')
@@ -58,4 +81,4 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
   })
   .catch(error => {
     console.log('MongoDB connection error:', error);
-  });
+  })
