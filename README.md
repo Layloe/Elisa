@@ -260,9 +260,9 @@ Act:
 Assert:
 
 2023-06-21
-** Apps to review: MVC, smile,elisa-testing
+** Apps to review: MVC, smile, elisa-testing
 
-Arrange: When I started reviewing past projects and classes from 100devs, I realized why I was having such a hard time building and debugging since it's not the way I learned to code.
+Arrange: When I started reviewing past projects and classes from 100devs, I realized why I was having such a hard time building and debugging since it's not the way I learned to code. It's all bout dat MVC. One major problem I think I'm going to have is in the views with React. Never really practiced attaching it to MVC. We used EJS/hanlde bars..I can ride my bike with no handle bars, no handle bars
 
 Act:
 
