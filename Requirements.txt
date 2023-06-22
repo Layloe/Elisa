@@ -1,0 +1,42 @@
+Requirements
+
+- user can log in
+    - UI that accepts login information (email, password?)
+    - Submit button
+    - API that takes email/password and creates a session
+    - what is a session?
+        - cookie
+        - token in sessionStorage
+- multiple users can access the data
+- add/track some measurements at a specific time
+    - diet
+    - blood pressure
+    - medication
+    - must include a timestamp
+- store the results in persistent storage (MongoDB)
+- results are displayed in a table
+    - how should the table look?
+        - HW for Eduardo: look around the internet for tables that you like. Save screenshots or bookmarks so we can know what we're aiming for
+    - maybe HTML table
+
+Goals
+
+- identify if there are certain things that are causing harm / good
+
+Tasks
+
+1. Setup
+    a. Create repo using Github's web interface
+    b. Clone the repo to your computer
+    c. run "npm init"
+    d. MongoDB - create account and new database / project
+    e. create `.env` file - add MongoDB connection URL to `.env`
+2. Configure app
+    a. install dependencies (express, mongoose, dotenv, )
+    b. create a "start" command https://github.com/Layloe/MVCfs/blob/383b3aa1fef66f81e7f1571bd08f8f6fc2fa8c61/package.json#L8
+    c. create a `server.js` file
+3. Build login features
+    a. defined the route / routes
+    b. make a view for the UI form
+    c. make a API handler to accept email/password
+
