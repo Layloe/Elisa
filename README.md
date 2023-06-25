@@ -1,6 +1,11 @@
 
-# Elisa-
-Hyper tension health tracker 
+# Elisa
+health tracker 
+
+npm install express mongoose ejs dotenv
+npm install --save-dev nodemon
+
+"start": "nodemon server.js"
 
 ---requirements rough draft:
 
@@ -267,3 +272,19 @@ Arrange: When I started reviewing past projects and classes from 100devs, I real
 Act:
 
 Assert:
+
+2023-06-22
+**Start the refactoring backend first then move on to the front end.
+Assert: -Tried to fork on gitgub had some problems(I'm the owner) going to skip this for now. I want to start building
+        -Definitly going with MVC structure
+        -Might use bootstrap/handle bars/ejs temp?
+        -Reviewing 100devs classes 
+        -Decide what MVC project to use 2121 or wolf
+        -Look at code to figure out what would work best to later reactify the code
+
+Act:
+
+Arrange:
+
+2023-06-24
+**Start building today
