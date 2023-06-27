@@ -3,10 +3,13 @@ const TicketList = require('../models/ticketlist')
 module.exports = {
     deleteTicket: (req, res) => {
         const id = req.params.id;
-        TicketList.findByIdAndRemove(id, err => {
-            if (err) return res.send(500, err);
-            res.redirect("/");
-        });
+        TicketList.findByIdAndRemove(id)
+        .then(() => {
+            res.redirect('/')
+        })
+        .catch((err) => {
+            res.status(500).send(err)
+        })
     },
     updateTicket: (req, res) => {
         const id = req.params.id;
@@ -15,9 +18,12 @@ module.exports = {
             {
                 status: 'Closed'
             },
-            err => {
-                if (err) return res.status(500).send(err);
-                res.redirect("/");
-            });
+        )    
+            .then(() => {
+                res.redirect('/')
+            })
+            .catch((err) => {
+                res.status(500).send(err)
+            })
     }
 }
