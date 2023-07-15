@@ -13,8 +13,8 @@ module.exports = {
     createTicket: async (req, res) => {
         const newTicket = new TicketList(
             {
-                subject: req.body.subject,
-                description: req.body.description,
+                timeOfDay: req.body.timeOfDay,
+                bloodPressure: req.body.bloodPressure,
                 severity: req.body.severity,
                 assignedTo: req.body.assignedTo,
                 status: req.body.status

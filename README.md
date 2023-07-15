@@ -275,10 +275,10 @@ Assert:
 
 2023-06-22
 **Start the refactoring backend first then move on to the front end.
-Assert: -Tried to fork on gitgub had some problems(I'm the owner) going to skip this for now. I want to start building
-        -Definitly going with MVC structure
+Assert: -Tried to fork on github had some problems(I'm the owner) going to skip this for now. I want to start building
+        -Definitely going with MVC structure
         -Might use bootstrap/handle bars/ejs temp?
-        -Reviewing 100devs classes 
+        -Reviewing 100devs classes
         -Decide what MVC project to use 2121 or wolf
         -Look at code to figure out what would work best to later reactify the code
 
@@ -288,3 +288,110 @@ Arrange:
 
 2023-06-24
 **Start building today
+
+	-Pushed MVC structure code
+-Still have some bugs to work out
+-Still have some properties to add
+-Later will have to reactify this
+
+2023-06-26
+**My code is bugging out, become an exterminator
+Problem 1
+
+Arrange:Problem: Property on form is not posting a name
+	 Solution: Follow the route and search in views and model folder; use dev tools to verify
+
+Act: Make sure the view has the matching property names
+       -Change the value to include the correct names
+
+Assert: Success! Verified that server and views app both posted name successfully 
+
+Problem 2
+
+Arrange:
+	-Getting error when deleting item
+	-MongooseError: Model.findByIdAndRemove() no longer accepts a callback
+	-When I get back start googling/dev tools/ error
+
+Act:  Googled error and found out the syntax I was using was outdated.Deleted call back and made the syntax into a promise.Updated with ‘then()’ and ‘catch()’ in my edit.js controller.
+
+Assert:Success! Verified that server and views both deleted entries successfully.
+
+Problem 3 
+
+Arrange: Need to connect to the right db
+	Solution: Change the model exports and add Elisa to DB_CONNECTION
+
+Act: Did everything above but in different orders and a bit more trial and error 🙂
+
+Assert::Success! Verified that the server made entries successfully to the Elisa db.
+
+Want to discuss how hard it will be to reactfy my front end and if there are possible  suggestions that I could be doing now to help with that. Ex. Stuff to avoid for the future, or maybe things that I could do now to help in the future.
+
+Possibly discuss if I should start having an online presence and ways to go about it.
+
+Start fixing and updating my portfolio to actually showcase my current projects. 
+
+Signed up for the free trial copilot, thoughts on it. Still have no idea how to use it. But from what I hear it can really help speed up 
+
+
+
+2023-06-27
+** #100Devs github teams class
+Learned more about GitHub and how it can help workflow
+Learned about the process and steps of working on a team.
+Have homework to practice using GitHub.
+Apparently we are going to start working in teams in July to get the experience of learning and  working on a project with GitHub. 
+With practice I could see how this will help me in the future 
+Apparently 100Devs is trying to figure out ways to learn and get paid at the same time. 
+I'm not sure if we will be working open source or actual paying clients 
+
+
+2023-06-28
+** Had a meeting with my sensei Eric, we went over strategies on where my attention should be going 
+	-Linkedin: online presence
+	-Elisa app: Strategies on how to incorporate different views
+
+2023-06-29
+**Read some dudes blog (wink*)  that was very insightful
+
+2023-06-30
+**Searches for examples on the direction I want the app to go
+    -Changing the closed and open to medication tooken 
+    -Ways I might reactify
+
+2023-07-02
+** Finshing Cat app.
+
+2023-07-03
+**Finished Cat app.
+-need to debug
+-thinking on how I'm going to apply this to the Elisa app.  
+
+2023-07-05
+**Fixing delete bug on cat app
+2023-07-05
+**Fixing delete route bug
+Arrange: Problem- Getting a ‘Cannot POST /delete/64a2f02ada10692eee434923’ error
+	   Soulution- Review code for spelling errors
+		      - Check the dom and google for hints
+
+Act: 
+	-Follow route and verify that route is configured correctly
+-Check for spelling errors along the way
+ 
+
+Assert: Success! Turned out to be a spelling error; forgot an ‘e’ in delete in the routes
+
+*Added a bit of styling to background
+
+2023-07-09
+**Added authentication to cat app
+
+2023-07-10
+**Debugged cat app: Had an issue with the userController.
+	-I will be incorporating some of this app into my Elisa app.
+
+2023-07-15
+**Start incorporating passport into Elisa app; trying out new extensions supposably help with ADHD
+    -Added time of day drop down
