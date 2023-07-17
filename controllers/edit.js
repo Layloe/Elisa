@@ -16,6 +16,7 @@ module.exports = {
         TicketList.findByIdAndUpdate(
             id,
             {
+                status: 'Closed',
                 status: 'Medication Taken'
             },
         )    
