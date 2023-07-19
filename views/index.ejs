@@ -54,7 +54,7 @@
                 <div id="issuesList">
                     <% ticketList.forEach(tickets => { %>
                         <div class = "well">
-                            <h6>Date: <%=tickets.date%></h6>
+                            <h5>Date: <%=tickets.date%></h5>
                             <p><span class="label <%=tickets.status== 'Medication Not Taken' ? 'label-success' : 'label-info'%>"><%=tickets.status%></span></p>
                             <h3><%=tickets.timeOfDay%></h3>
                             <h2><%=tickets.bloodPressure%></h2>
