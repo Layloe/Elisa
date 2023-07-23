@@ -5,7 +5,7 @@ module.exports = {
         try {
             const tickets = await
             TicketList.find()
-            res.render("index.ejs", { ticketList: tickets });
+            res.render("index.ejs", { ticketList: tickets, user: req.user });
         } catch (err) {
             if (err) return res.status(500).send(err);
         }
@@ -13,8 +13,8 @@ module.exports = {
     createTicket: async (req, res) => {
         const newTicket = new TicketList(
             {
-                subject: req.body.subject,
-                description: req.body.description,
+                timeOfDay: req.body.timeOfDay,
+                bloodPressure: req.body.bloodPressure,
                 severity: req.body.severity,
                 assignedTo: req.body.assignedTo,
                 status: req.body.status
@@ -29,3 +29,7 @@ module.exports = {
         }
     }
 }
+
+// exports.getIndex = function(req, res) {
+//     res.render('index', { user: req.user });
+// };

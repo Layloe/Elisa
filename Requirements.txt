@@ -39,4 +39,9 @@ Tasks
     a. defined the route / routes
     b. make a view for the UI form
     c. make a API handler to accept email/password
-
+4. Update bloodPressure input
+    a. Use JS to automagicly use slash
+    b. Split blood pressure into two inputs
+5. Responsive design: bootstrap/react
+6. Task for calender view: design
+7. New entry on the top of the list

@@ -1,6 +1,11 @@
+
 const mongoose = require('mongoose');
 const ticketListSchema = new mongoose.Schema({
-subject: {
+timeOfDay: {
+    type: String,
+    required: true
+},
+bloodPressure:{
     type: String,
     required: true
 },
@@ -13,9 +18,11 @@ assignedTo: {
     type: String,
     required: true
 },
+
 status: {
     type: String,
-    default: "Open"
+    enum: ["Medication Taken", "Medication Not Taken"],
+    default: "Medication Not Taken"
 },
 date: {
     type: Date,
