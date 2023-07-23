@@ -5,7 +5,7 @@ module.exports = {
         try {
             const tickets = await
             TicketList.find()
-            res.render("index.ejs", { ticketList: tickets });
+            res.render("index.ejs", { ticketList: tickets, user: req.user });
         } catch (err) {
             if (err) return res.status(500).send(err);
         }
@@ -29,3 +29,7 @@ module.exports = {
         }
     }
 }
+
+// exports.getIndex = function(req, res) {
+//     res.render('index', { user: req.user });
+// };
