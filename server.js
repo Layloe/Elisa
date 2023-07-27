@@ -19,7 +19,7 @@ connectDB()
 
 //Set Middleware
 app.set("view engine", "ejs");
-app.use(express.static('public'))
+app.use(express.static('public', { type: 'text/css' }))
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
