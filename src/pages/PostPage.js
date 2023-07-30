@@ -15,7 +15,7 @@ const PostPage = () => {
 
     useEffect(() => {
         const fetchPost = async () => {
-            const res = await axios.get(`http://localhost:4242/posts/${id}`)
+            const res = await axios.get(`/posts/${id}`) //? changes routes, delete this after running
             setPost(res.data)
         }
         fetchPost()

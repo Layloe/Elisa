@@ -21,7 +21,7 @@ const NewPostPage = () => {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        await axios.post('http://localhost:4242/posts',post)
+        await axios.post('/posts', post) //? changes routes, delete this after running
         navigate('/')
     }
 

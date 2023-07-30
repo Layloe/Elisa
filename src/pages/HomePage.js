@@ -8,7 +8,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get(`http://localhost:4242/posts`)
+            const res = await axios.get(`/posts`) //? changes routes, delete this after running
             setPosts(res.data)
         }
         fetchPosts()
@@ -16,7 +16,7 @@ const HomePage = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4242/posts/${id}`) //remove from DB
+            await axios.delete(`/posts/${id}`) //remove from DB //? changes routes, delete this after running
             setPosts(posts.filter((post) => post._id !== id)) //remove item from state
         } catch (error) {
             console.error('Error deleting post', error)

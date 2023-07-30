@@ -45,3 +45,24 @@ Tasks
 5. Responsive design: bootstrap/react
 6. Task for calender view: design
 7. New entry on the top of the list
+
+*React rewrite
+1.Get the Elisa app to a working state and commit and push.
+    a. Get the server to connect to react front-end 
+    -possible ideas: use the Blog backend as temp server till up and running
+    -start looking at both server.js compare, look where react is pointing too
+    -compare cards
+    -use npm run startReact for front end
+    -Keep it slow, just focus on getting React connected to backend
+    b.notes about changes and what I need to revert if I brake it:
+    ****When you make http requests in React (e.g. with axios), are you expecting to receive JSON or HTML?
+    ****In the Elisa app, how does it render the HTML? What files are responsible for generating the server response.
+        -installed cors 
+        -added cors to middleware and for now commented out app.set("view engine", "ejs")
+        -updated route paths in HomePage.js, NewPostPage.js, and PostPage.js to make API requests to the Express 
+        -inspect index.html and inspect index.js/ inpect controllers
+        -npm run startReact for frontend
+        -inpected devtools/network tab = html !json
+        -added a <script src="/build/index.js"></script> into index.html
+        -testing: changed the /controllers/home.js to render "ejs" to render "react"
+

@@ -10,9 +10,9 @@ function App() {
     <Router>
       <NavBar /> 
       <Routes>
-        <Route path="/" element={<HomePage/>} />
-        <Route path="/posts/new" element={<NewPostPage/>} />
-        <Route path="/posts/:id" element={<PostPage/>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/posts/new" element={<NewPostPage />} />
+        <Route path="/posts/:id" element={<PostPage />} />
       </Routes>
     </Router>
   );

@@ -1,6 +1,7 @@
 //Declare Variables
 const express = require("express");
 const app = express();
+const cors = require('cors')
 const PORT = 2121;
 const mongoose = require("mongoose")
 const session = require('express-session')
@@ -18,8 +19,9 @@ require('dotenv').config({path: './config/.env'})//! Put in variables
 connectDB()
 
 //Set Middleware
-app.set("view engine", "ejs");
-app.use(express.static('public', { type: 'text/css' }))
+// app.set("view engine", "ejs");
+app.use(cors())
+app.use(express.json()) //? testing diffrent angles 
 app.use(express.urlencoded({ extended: true }));
 
 app.use(session({
