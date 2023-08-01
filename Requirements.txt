@@ -60,9 +60,12 @@ Tasks
         -installed cors 
         -added cors to middleware and for now commented out app.set("view engine", "ejs")
         -updated route paths in HomePage.js, NewPostPage.js, and PostPage.js to make API requests to the Express 
-        -inspect index.html and inspect index.js/ inpect controllers
+        -inspect index.html and inspect index.js/ inspect controllers
         -npm run startReact for frontend
         -inpected devtools/network tab = html !json
         -added a <script src="/build/index.js"></script> into index.html
-        -testing: changed the /controllers/home.js to render "ejs" to render "react"
-
+        -testing: changed the /controllers/home.js to render "ejs" to render "react" *didn't seem to change anything
+        -changed app.use(express.static('public')) to app.use(express.json())
+        -going to organize my folder structure to help me carpementalize my thinking.
+        -might approch this from a diffrent angle
+        - 
