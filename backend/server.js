@@ -14,7 +14,7 @@ const editRoutes = require("./routes/edit")
 const User = require('./models/userModel')
 const userRoutes= require('./routes/userRoutes')
 
-require('dotenv').config({path: './backend/config/.env'})//! Put in variables
+require('dotenv').config({path: './config/.env'})//! Put in variables
 
 connectDB()
 
