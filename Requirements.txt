@@ -65,4 +65,7 @@ Tasks
         -inpected devtools/network tab = html !json
         -added a <script src="/build/index.js"></script> into index.html
         -testing: changed the /controllers/home.js to render "ejs" to render "react"
-
+        -start looking at get axios /posts routes
+        -getting communicating with backend
+        -gloriuos new errors!
+        -add new post routes to existing code/debug errors

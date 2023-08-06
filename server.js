@@ -13,6 +13,7 @@ const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
 const User = require('./models/userModel')
 const userRoutes= require('./routes/userRoutes')
+const postRoutes = require('/routes/postRoutes')                      //?Testing here
 
 require('dotenv').config({path: './config/.env'})//! Put in variables
 
@@ -43,10 +44,36 @@ app.use((req,res,next) => {
     next()
 })
 
-//Set Routes
+// Set Routes
 app.use('/', homeRoutes) //!Add names to routes
+app.use('/posts', postRoutes)                     //? *testing this route
 app.use('/edit', editRoutes)
 app.use('/', userRoutes)
+
+// //get all post
+// app.get('/posts', async (req,res) => {
+//     const posts = await Post.find()
+//     res.send(posts)
+// })
+
+// //get one post
+// app.get('/posts/:id', async (req,res) => {
+//     const posts = await Post.findById(req.params.id)
+//     res.send(posts)
+// })
+
+// //create new post
+// app.post('/posts', async (req,res) => {
+//     const newPost = new Post(req.body)
+//     const savedPost = await newPost.save()
+//     res.send(savedPost)
+// })
+
+// //delete post
+// app.delete('/posts/:id', async (req,res) => {
+//      await Post.findByIdAndDelete(req.params.id)
+//     res.status(200).send('Post deleted')
+// })
 
 
 

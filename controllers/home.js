@@ -5,9 +5,9 @@ module.exports = {
         try {
             const tickets = await
             TicketList.find()
-            res.render("index.ejs", { ticketList: tickets, user: req.user });
+            res.json({ ticketList: tickets, user: req.user });
         } catch (err) {
-            if (err) return res.status(500).send(err);
+            if (err) return res.status(500).json({ error: 'Internal server error' })
         }
     },
     createTicket: async (req, res) => {
@@ -20,11 +20,12 @@ module.exports = {
                 status: req.body.status
             });
         try {
-            await newTicket.save();
+            const savedTicket = await newTicket.save()
+            res.json(savedTicket)
             console.log(newTicket)
             res.redirect("/");
         } catch (err) {
-            if (err) return res.status(500).send(err);
+            if (err) return res.status(500).json({ error: 'Internal server error' })
             res.redirect("/");
         }
     }

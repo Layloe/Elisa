@@ -7,9 +7,10 @@ const homeController = require('../controllers/home')
 
 router
     .get('/', homeController.getIndex) //read
+    .get('/posts', homeController.getIndex) //read //? testing
 
 router
-    .post('/new', homeController.createTicket) //create
+    .post('/posts', homeController.createTicket) //create
 
 
 module.exports = router
