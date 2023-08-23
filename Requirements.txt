@@ -63,9 +63,9 @@ Tasks
         -inspect index.html and inspect index.js/ inpect controllers
         -npm run startReact for frontend
         -inpected devtools/network tab = html !json
-        -added a <script src="/build/index.js"></script> into index.html
-        -testing: changed the /controllers/home.js to render "ejs" to render "react"
         -start looking at get axios /posts routes
         -getting communicating with backend
         -gloriuos new errors!
         -add new post routes to existing code/debug errors
+        -connect react with backend by update the axios.post and axios.delete calls in NewPostPage.js and HomePage.js to match your backend API routes.
+        -jumping back on the sattle after, schedule restructuring and getting over a cold.

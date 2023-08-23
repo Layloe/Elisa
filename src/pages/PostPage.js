@@ -3,8 +3,9 @@ import axios from 'axios'
 import { useParams } from "react-router-dom";
 import { Card, Container } from 'react-bootstrap'
 
+//! fit this to match the model
 const PostPage = () => {
-    const [post, setPost] = useState({
+    const [post, setPost] = useState({ 
         title: '',
         author: '',
         image: '',
