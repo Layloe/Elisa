@@ -2,15 +2,22 @@ import React, {useState} from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap'
+// import { createTicket } from "../controllers/content"; //? left off here
 
 
 const NewPostPage = () => {
 
     const [post, setPost] = useState({
-        title: '',
-        author: '',
-        image: '',
-        content: '',
+          // title: '',
+          // author: '',
+          // image: '',
+          // content: '',
+          
+          timeOfDay: '',
+          bloodPressure: '',
+          severity: '',
+          assignTo: '',
+          status: 'Medication Not Taken'
     })
 
     const navigate = useNavigate()
@@ -21,8 +28,15 @@ const NewPostPage = () => {
 
     const handleSubmit = async e => {
         e.preventDefault()
-        await axios.post('/posts', post) //? changes routes, delete this after running
-        navigate('/')
+        try {
+          const response = await axios.post('/posts', post)
+          console.log('Created new post successfully:', response.data)
+          navigate('/')
+        } catch (error) {
+          console.error('Error creating post', error)
+        }
+        // await axios.post('/posts', post) //? changes routes, delete this after running
+        // navigate('/')
     }
 
     return(

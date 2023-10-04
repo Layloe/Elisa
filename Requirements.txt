@@ -69,3 +69,28 @@ Tasks
         -add new post routes to existing code/debug errors
         -connect react with backend by update the axios.post and axios.delete calls in NewPostPage.js and HomePage.js to match your backend API routes.
         -jumping back on the sattle after, schedule restructuring and getting over a cold.
+
+**Debuging why I’m getting postRoutes error and trying to remember if it ran when I built it last time 
+	-follow route from server.js → postRoutes.js → home.js(routes folder) → home.js(controllers folder)
+	-fix one error at a time, don’t get overwhelmed
+	-if successful move on to react playing nice with the backend
+
+**Started making changes to PostPage and connect.js
+    -comapre postRoutes to home routes
+    -run through GPT for grammmer errors
+    -make sure to focus on one task at a time
+
+**Going over postRoutes
+    -edited controller 
+    -follow the route, this is easier with sleep. It makes it so simple to seperate what I need to focus on and what I dont. Be paitant. It will come soon.tm 
+
+**Left off on connecting to api: controller/connect.js
+    -finish connecting postRoutes
+    -left open the steps needed to get me to new errors
+
+**Got both servers to run but getting a couple of errors, need to configure both servers to match the correct endpoint.Currently getting these errors:
+    -404  :3000/posts
+    -error creating post NewPostPage.js.31
+Want to fix these now, I hope I feel this way when I'm back to work on this later this afternoon.
+
+    

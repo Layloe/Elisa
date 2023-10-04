@@ -10,7 +10,7 @@ function App() {
     <Router>
       <NavBar /> 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />             //? test with '/posts' 
         <Route path="/posts/new" element={<NewPostPage />} />
         <Route path="/posts/:id" element={<PostPage />} />
       </Routes>

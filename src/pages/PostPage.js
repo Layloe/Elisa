@@ -3,21 +3,27 @@ import axios from 'axios'
 import { useParams } from "react-router-dom";
 import { Card, Container } from 'react-bootstrap'
 
-//! fit this to match the model
+//! fit this to match the model                   
 const PostPage = () => {
     const [post, setPost] = useState({ 
-        title: '',
-        author: '',
-        image: '',
-        content: '',
+      timeOfDay: '',                        //?Changed, testing here
+      bloodPressure: '',
+      severity: '',
+      assignedTo: '',
+      status: 'Medication Not Taken',
     })
 
     const {id} = useParams()
 
     useEffect(() => {
         const fetchPost = async () => {
+          try {
             const res = await axios.get(`/posts/${id}`) //? changes routes, delete this after running
             setPost(res.data)
+          } catch (error) {
+            console.error('Error getting post', error)
+          }
+
         }
         fetchPost()
     },[id])
@@ -26,7 +32,7 @@ const PostPage = () => {
         <Container className='mt-4'>
             <Card>
               <div style={{maxHeight: '500px', overflow: 'hidden'}}>
-                <Card.Img className='img-fluid' variant='top' src={post.image} alt={post.title}></Card.Img>
+                <Card.Img className='img-fluid' variant='top' src={post.image} alt={post.title}></Card.Img> //! need to include this in the card body
               </div>
               <Card.Body>
                 <Card.Title>{post.title}</Card.Title>

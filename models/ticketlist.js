@@ -1,6 +1,7 @@
 
 const mongoose = require('mongoose');
 const ticketListSchema = new mongoose.Schema({
+
 timeOfDay: {
     type: String,
     required: true

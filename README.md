@@ -395,3 +395,49 @@ Assert: Success! Turned out to be a spelling error; forgot an ‘e’ in delete 
 2023-07-15
 **Start incorporating passport into Elisa app; trying out new extensions supposably help with ADHD
     -Added time of day drop down
+
+2023-09-15
+ Arrange: The get post route isn't working.When React trys to get /posts from the backend it errors with a 404
+
+ Act: Follow the post route all the way through to see what might be causing the 404. The home controller and the home route are a good place to start tinkering. Wondering if we should just combine connectApi.js and home.js controllers.
+ - in the controller home.js ivestigate what getIndex does and if it's set up get.
+ -*try checking out the the blog server.js
+ -Decide wether I should keep using app.use in my server.js or do the app.get to simplify things(make sure to check out the structure of the folder and how to best use the get)
+
+ Assert:
+
+2023-09-16
+**left off on blog backend and testing new MVP structure mainly focusing on routes
+
+2023-09-25
+start investigating http://localhost:3000/posts and why I'm gettting this error
+history.ts:487 No routes matched location "/posts" 
+
+2023-09-26
+Updated useEffect with http://localhost:2121/posts. 
+Need to debug "Uncaught TypeError: posts.map is not a function," error
+Start deconstructing the routes. One by one and fixing the errors as they come.
+
+Can't decide if should start cleaning up my code and making it dry so I could easily read it or just getting it running. As Im typing this I think getting it running would be best.
+    -possible reason I could be getting error is the model doesn't match the current react code. But before I change the react components to accept new model. I want to make sure that's the error or else I could just be making harder for future self.
+
+* Start incorperating my current projects on my profolio.
+
+2023-09-29
+Start breaking down the app onto simple components, compare current app to older app. Start off with debugging the map error and fix the cards to fit the model. Main thing here is to get all posts from db.
+Keep breaking it down till we get successfull get.
+    *Use anime-doro with the new castlevania(so good btw) 25min on 25min off
+
+2023-09-30
+Anime-doro was a failure, I ended up watching all eight episodes but I will say I had a cold. That's it!
+Okay picking off where we left off the map error and history.ts:487 No routes matched location "/posts" error
+    -fixed HomePage.js cards to match the schema 
+        _id:
+        timeOfDay:
+        bloodPressure:
+        severity:
+        assignedTo:
+        status:
+        date:
+
+
