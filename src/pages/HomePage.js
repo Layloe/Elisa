@@ -34,8 +34,8 @@ const HomePage = () => {
     return(
         <Container>
         <Row>
-        {Array.isArray(posts) && posts.length > 0  ? (
-        posts.map((post) => (
+        
+        {posts.map((post) => (
             <Col md={4} className="mb-4" key={post._id}>
               <Card style={{ width: '18rem' }}>
                 <Card.Body>
@@ -54,10 +54,8 @@ const HomePage = () => {
                 
             </Col>
 
-             ))
-        ) : (
-            <p>No posts available</p>
-        )}
+             ))}
+
             </Row>
         </Container>
     )

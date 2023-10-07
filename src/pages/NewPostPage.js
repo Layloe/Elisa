@@ -3,8 +3,6 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap'
 
-
-
 const NewPostPage = () => {
 
     const [post, setPost] = useState({          
