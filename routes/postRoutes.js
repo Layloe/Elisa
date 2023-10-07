@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const ticketlist = require('../models/ticketlist')
-// const homeController = require('../controllers/home')
+const homeController = require('../controllers/home')
 const postController = require('../controllers/connectApi.js')
 
 
@@ -11,7 +11,7 @@ router
     .get("/posts",  async (req,res) => {
         try {
             const posts = await ticketlist.find()
-            res.json(posts)
+            res.json(posts)                           //test with send(posts)
         } catch (err) {
             res.status(500).send("Server Error")
         }
@@ -25,7 +25,7 @@ router
             if(!post) {
                 return res.status(404).send('Post not found')
             }
-            res.json(post)                                                  //? Look into res.json
+            res.json(post)                                                  
         } catch (err) {
             res.status(500).send("Server Error")
         }

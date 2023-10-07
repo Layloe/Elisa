@@ -8,11 +8,16 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
+            try {
             const res = await axios.get(`http://localhost:2121/posts`) 
-            console.log('API Response:', res.data)
-            setPosts(res.data)
+            // console.log('API Response:', res.data)
+            setPosts(res.data.ticketList)
             
-        }
+            
+        } catch (error) {
+            console.error('Error fetching posts:', error);
+          }
+        }  
         fetchPosts()
         console.log(fetchPosts)
     },[])
@@ -29,7 +34,7 @@ const HomePage = () => {
     return(
         <Container>
         <Row>
-        {Array.isArray(posts) && posts.length > 0 ? (
+        {Array.isArray(posts) && posts.length > 0  ? (
         posts.map((post) => (
             <Col md={4} className="mb-4" key={post._id}>
               <Card style={{ width: '18rem' }}>

@@ -3,7 +3,7 @@ const axios = require('axios')
 const TicketList = require('../models/ticketlist')
 
 
-const connectMongoDB = 'http://localhost:2121/posts' // Update this URL to match backend API endpoint
+const connectMongoDB = 'http://localhost:2121/posts' 
 
 const createInstance = axios.create({
     connectMongoDB,

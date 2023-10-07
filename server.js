@@ -45,7 +45,7 @@ app.use((req,res,next) => {
 // Set Routes
 app.use('/', homeRoutes) 
 app.use('/posts', homeRoutes)
-app.use('/posts', postRoutes)                     
+app.use('/posts/new', postRoutes)                     
 // app.use('/posts/:id', editRoutes)
 // app.use('/', userRoutes)
 

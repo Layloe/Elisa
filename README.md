@@ -440,4 +440,13 @@ Okay picking off where we left off the map error and history.ts:487 No routes ma
         status:
         date:
 
+2023-10-05
+Going to try to debug my HomePage.js and try to get all posts to display. Asked for a hint to point me in the right direction and an area of focus will be the error catching.
+ -When I get back to this later today compare my current backend to other backends I built. 
+ -Use postman   
+    
+2023-10-06
+-removed if else in return statement
+-got my HomePage to posts by addding setPosts(res.data.ticketList)
+- modify other pages trying the same idea
 
