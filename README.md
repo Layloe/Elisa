@@ -450,3 +450,8 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 -got my HomePage to posts by addding setPosts(res.data.ticketList)
 - modify other pages trying the same idea
 
+2023-10-08
+- following the /posts route from start to finish to try to debug
+- decide what routes page I need to use
+- after make sure the controller logic matches
+- just noticed I have to make a day of the week title(push this till after I get MVP up and running)
