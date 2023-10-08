@@ -455,3 +455,4 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 - decide what routes page I need to use
 - after make sure the controller logic matches
 - just noticed I have to make a day of the week title(push this till after I get MVP up and running)
+ - when I pick back up start at postRoutes.js, one route here is forsure working. this is were I need to tinker to get all my routes up and running.

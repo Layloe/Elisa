@@ -1,4 +1,4 @@
-// const ticketList = require('../models/ticketlist')
+const ticketList = require('../models/ticketlist')
 
 // exports.getAllPosts = async (req,res) => {
 //     try {
@@ -10,8 +10,8 @@
 //     }
 // }
 
-// // GET a specific post by ID
-// exports.getPostById = async (req, res) => {
+// GET a specific post by ID
+        // exports.getPostById = async (req, res) => {
 //     try {
 //       const post = await Post.findById(req.params.id);
 //       if (!post) {
