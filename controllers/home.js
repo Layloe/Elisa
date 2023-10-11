@@ -28,7 +28,7 @@ module.exports = {
             if (err) return res.status(500).json({ error: 'Internal server error' })
             res.redirect("/");
         }
-    }
+    },
 }
 
 // exports.getIndex = function(req, res) {

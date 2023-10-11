@@ -9,14 +9,28 @@ const createInstance = axios.create({
     connectMongoDB,
 })
 
- const createPost = async (postData) => {
+const ticketList = require('../models/ticketlist');
+
+exports.createPost = async (req, res) => {
     try {
-        const response = await axios.createInstance(`${connectMongoDB}/posts`, postData) // Update this URL to match backend API endpoint
-        return response.data
+        const newPost = new ticketList(req.body);
+        const savedPost = await newPost.save();
+        res.status(201).json(savedPost);
     } catch (error) {
-        throw error
+        console.error('Error creating a new post:', error);
+        res.status(500).json({ error: 'Internal server error' });
     }
-}
+};
+
+
+//  const createPost = async (postData) => {
+//     try {
+//         const response = await axios.createInstance(`${connectMongoDB}/posts`, postData) // Update this URL to match backend API endpoint
+//         return response.data
+//     } catch (error) {
+//         throw error
+//     }
+// }
 
 
 
@@ -31,6 +45,6 @@ const CreateTicket = async (res, req) => {
 }
 
 module.exports = {
-    createPost,
+    // createPost,
     CreateTicket,
 }

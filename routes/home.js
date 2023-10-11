@@ -10,7 +10,7 @@ router
     .get('/posts', homeController.getIndex) //read //? testing
 
 router
-    .post('/posts/new', homeController.createTicket) //create
+    .post('/posts', homeController.createTicket) //create
 
 
 module.exports = router

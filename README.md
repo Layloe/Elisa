@@ -455,4 +455,13 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 - decide what routes page I need to use
 - after make sure the controller logic matches
 - just noticed I have to make a day of the week title(push this till after I get MVP up and running)
- - when I pick back up start at postRoutes.js, one route here is forsure working. this is were I need to tinker to get all my routes up and running.
+ - when I pick back up start at postRoutes.js, one route here is forsure working. this is were I need to tinker to get all my routes up and running. Also I commented out postController.js. Need to edit postRoutes to work with postController. Speration of concerns and all that.
+ - in App.js, test to make sure all routes match and work with server.js
+
+ 2023-10-10
+ -yep, having interwebs isssues
+
+ 2023-10-11
+ - Fixing routes, followed home route and edited routes/home.js
+ -NewPostPage.js seems to be my point of focus. Changed somethings that I don't have enough time to explian but when I come back pick up here.
+ - Also home page is now not diplaying posts oof, no biggie. Focus on getting to post to API.

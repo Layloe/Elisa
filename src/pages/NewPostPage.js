@@ -22,7 +22,7 @@ const NewPostPage = () => {
     const handleSubmit = async e => {
         e.preventDefault()
         try {
-          const response = await axios.post('http://localhost:2121/posts', post)
+          const response = await axios.post('http://localhost:2121/posts/new', post)
           console.log('Created new post successfully:', response.data)
           navigate('/')
         } catch (error) {

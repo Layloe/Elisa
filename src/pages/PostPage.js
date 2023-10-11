@@ -19,7 +19,7 @@ const PostPage = () => {
         const fetchPost = async () => {
           try {
             const res = await axios.get(`http://localhost:2121/posts/${id}`) 
-            setPost(res.data)    //? ticketList
+            setPost(res.data.ticketList)    //? ticketList
           } catch (error) {
             console.error('Error getting post', error)
           }

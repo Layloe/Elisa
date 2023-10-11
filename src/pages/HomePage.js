@@ -9,7 +9,7 @@ const HomePage = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-            const res = await axios.get(`http://localhost:2121/posts`) 
+            const res = await axios.get(`http://localhost:2121/`) 
             // console.log('API Response:', res.data)
             setPosts(res.data.ticketList)
             
