@@ -465,3 +465,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  - Fixing routes, followed home route and edited routes/home.js
  -NewPostPage.js seems to be my point of focus. Changed somethings that I don't have enough time to explian but when I come back pick up here.
  - Also home page is now not diplaying posts oof, no biggie. Focus on getting to post to API.
+
+ 2023-10-12
+ -continued fixing postRoutes
+ -changed code crashed my server. Compare new changes to old and how they interact with the api

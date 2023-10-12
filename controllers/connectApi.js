@@ -25,8 +25,7 @@ exports.createPost = async (req, res) => {
 
 //  const createPost = async (postData) => {
 //     try {
-//         const response = await axios.createInstance(`${connectMongoDB}/posts`, postData) // Update this URL to match backend API endpoint
-//         return response.data
+//         const response = await axios.createInstance(`${connectMongoDB}/posts`, postData) 
 //     } catch (error) {
 //         throw error
 //     }

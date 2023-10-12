@@ -34,17 +34,17 @@ router
 })
 
 // create 
-// new post .post('/', postController.createPost)
-router
-    .post('/posts/new', postController.createPost , async (req, res) => {
-        try {
-            const newPost = new ticketlist(req.body)
-            const savePost = await newPost.save()
-            res.json(savePost)
-        } catch (err) {
-            res.status(500).send("Server Error")
-        }
-    })
+router.post('/posts/new', postController.createPost)
+// router
+//     .post('/posts/new', postController.createPost , async (req, res) => {
+//         try {
+//             const newPost = new ticketlist(req.body)
+//             const savePost = await newPost.save()
+//             res.json(savePost)
+//         } catch (err) {
+//             res.status(500).send("Server Error")
+//         }
+//     })
 
 // delete
 //  post .delete('/:id', postController.deletePostById)
