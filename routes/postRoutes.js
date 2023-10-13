@@ -34,7 +34,9 @@ router
 })
 
 // create 
-router.post('/posts/new', postController.createPost)
+router.post('/posts/new', async (req,res) => {
+    await postController.createPost(req.res)
+} )
 // router
 //     .post('/posts/new', postController.createPost , async (req, res) => {
 //         try {

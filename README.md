@@ -469,3 +469,8 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  2023-10-12
  -continued fixing postRoutes
  -changed code crashed my server. Compare new changes to old and how they interact with the api
+
+ 2023-10-13
+ -focuing on connectApi.js to stop my server from crashing.
+ -found a solution to stop db from crashing
+ -come back to NewPostPage.js to fix posting errors
