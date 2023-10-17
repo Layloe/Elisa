@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const ticketlist = require('../models/ticketlist')
 const homeController = require('../controllers/home')
-const postController = require('../controllers/connectApi.js')
+const postController = require('../controllers/postController')
 
 
 
@@ -33,20 +33,20 @@ router
         }
 })
 
-// create 
-router.post('/posts/new', async (req,res) => {
+//create 
+router.post('/new', async (req,res) => {
     await postController.createPost(req.res)
 } )
-// router
-//     .post('/posts/new', postController.createPost , async (req, res) => {
-//         try {
-//             const newPost = new ticketlist(req.body)
-//             const savePost = await newPost.save()
-//             res.json(savePost)
-//         } catch (err) {
-//             res.status(500).send("Server Error")
-//         }
-//     })
+router
+    .post('/posts/new', postController.createPost , async (req, res) => {
+        try {
+            const newPost = new ticketlist(req.body)
+            const savePost = await newPost.save()
+            res.json(savePost)
+        } catch (err) {
+            res.status(500).send("Server Error")
+        }
+    })
 
 // delete
 //  post .delete('/:id', postController.deletePostById)

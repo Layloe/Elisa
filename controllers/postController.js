@@ -1,4 +1,20 @@
 const ticketList = require('../models/ticketlist')
+const axios = require('axios');
+
+  // CREATE a new post
+  exports.createPost = async (req, res) => {
+    try {
+      const newPost = new ticketList(req.body);
+      const savedPost = await newPost.save();
+      const connectDB = 'http://localhost:2121'
+      const response = await axios.post(`${connectDB}/posts/new`, newPost)
+
+      res.status(201).json(savedPost);
+    } catch (error) {
+      console.error('Error creating a new post:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  };
 
 exports.getAllPosts = async (req,res) => {
     try {
@@ -11,9 +27,9 @@ exports.getAllPosts = async (req,res) => {
 }
 
 // GET a specific post by ID
-        exports.getPostById = async (req, res) => {
+   exports.getPostById = async (req, res) => {
     try {
-      const post = await Post.findById(req.params.id);
+      const post = await ticketList.findById(req.params.id);
       if (!post) {
         return res.status(404).json({ error: 'Post not found' });
       }
@@ -24,19 +40,7 @@ exports.getAllPosts = async (req,res) => {
     }
   };
   
-  // CREATE a new post
-  exports.createPost = async (req, res) => {
-    try {
-      const newPost = new Post(req.body);
-      const savedPost = await newPost.save();
-      res.status(201).json(savedPost);
-    } catch (error) {
-      console.error('Error creating a new post:', error);
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  };
-  
-  // DELETE a post by ID
+ // DELETE a post by ID
   exports.deletePostById = async (req, res) => {
     try {
       await Post.findByIdAndDelete(req.params.id);
@@ -46,3 +50,4 @@ exports.getAllPosts = async (req,res) => {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
+

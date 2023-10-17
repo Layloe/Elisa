@@ -9,7 +9,7 @@ const NewPostPage = () => {
           timeOfDay: '',
           bloodPressure: '',
           severity: '',
-          assignTo: '',
+          assignedTo: '',
           status: 'Medication Not Taken'
     })
 

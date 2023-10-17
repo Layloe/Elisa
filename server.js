@@ -12,7 +12,9 @@ const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
 const User = require('./models/userModel')
 const userRoutes= require('./routes/userRoutes')
-const postRoutes = require('./routes/postRoutes')                      //?Testing here
+const postRoutes = require('./routes/postRoutes') 
+// const NewPostRoutes = require('./routes/newPostRoutes')
+                     //?Testing here
 
 require('dotenv').config({path: './config/.env'})
 
@@ -44,7 +46,7 @@ app.use((req,res,next) => {
 
 // Set Routes
 app.use('/', homeRoutes) 
-app.use('/posts', postRoutes)                
+app.use('/posts/new', postRoutes)                
 app.use('/posts/:id', editRoutes)
 app.use('/', userRoutes)
 
