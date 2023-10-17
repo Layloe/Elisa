@@ -15,15 +15,16 @@ const NewPostPage = () => {
 
     const navigate = useNavigate()
 
-    const handleChange = e => {
+    const handleChange = (e) => {
         setPost({...post, [e.target.name]: e.target.value })
     }
 
-    const handleSubmit = async e => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-          const response = await axios.post('http://localhost:2121/posts/new', post)
-          console.log('Created new post successfully:', response.data)
+          // const response = 
+          await axios.post('http://localhost:2121/posts/new', post)
+          // console.log('Created new post successfully:', response.data)
           navigate('/')
         } catch (error) {
           console.error('Error creating post', error)
@@ -52,7 +53,7 @@ const NewPostPage = () => {
 
       <Form.Group>
         <Form.Label>Assign To</Form.Label>
-        <Form.Control type="text" rows={5} name="assignTo" placeholder="Assign To" onChange={handleChange} required />
+        <Form.Control type="text" rows={5} name="assignedTo" placeholder="Assigned To" onChange={handleChange} required />
       </Form.Group>
 
       <Form.Group>

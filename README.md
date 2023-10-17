@@ -474,3 +474,14 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -focuing on connectApi.js to stop my server from crashing.
  -found a solution to stop db from crashing
  -come back to NewPostPage.js to fix posting errors
+
+ 2023-10-16
+ debuggin routes
+ -failed gracefully 
+
+  2023-10-17
+ debuggin routes
+ -still failed gracefully 
+ -currently fixing router to work with controller
+ -un comment postRoutes to get server running correctly
+ -new errors woot!
