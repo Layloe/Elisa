@@ -7,8 +7,8 @@ const postController = require('../controllers/postController')
 
 
 // get all posts
-router
- .get('/', postController.getAllPosts)
+// router
+//  .get('/', postController.getAllPosts)
 // router 
 //     .get("/posts",  async (req,res) => {
 //         try {
@@ -20,8 +20,8 @@ router
 //     })
 
 // get one post
-router
- .get('/:id', postController.getAllPostById)
+// router
+//  .get('/:id', postController.getAllPostById)
 // router
 //     .get('/:id', async (req,res) => {
 //         try {
@@ -36,8 +36,8 @@ router
 // })
 
 //create 
-router.post('/new', async (req,res) => {
-    await postController.createPost(req.res)
+router.post('/new', (req,res) => {
+     postController.createPost(req.res)
 } )
 // router
 //     .post('/posts/new', postController.createPost , async (req, res) => {
@@ -51,8 +51,8 @@ router.post('/new', async (req,res) => {
 //     })
 
 // delete
-router
- post.delete('/:id', postController.deletePostById)
+// router
+//  post.delete('/:id', postController.deletePostById)
 // router
 //     .delete('/:id', async (req, res) => {
 //         try {

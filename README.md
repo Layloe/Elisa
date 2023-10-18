@@ -485,3 +485,6 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -currently fixing router to work with controller
  -un comment postRoutes to get server running correctly
  -new errors woot!
+
+ 2023-10-18
+ -commented out most of the duplicate code on postRoutes and got new errors.
