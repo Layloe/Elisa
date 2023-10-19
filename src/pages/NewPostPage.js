@@ -10,7 +10,8 @@ const NewPostPage = () => {
           bloodPressure: '',
           severity: '',
           assignedTo: '',
-          status: 'Medication Not Taken'
+          status: 'Medication Not Taken',
+          date: ''
     })
 
     const navigate = useNavigate()
@@ -59,6 +60,11 @@ const NewPostPage = () => {
       <Form.Group>
         <Form.Label>Status</Form.Label>
         <Form.Control type="text"  name="status" placeholder="Status" onChange={handleChange} required />
+      </Form.Group>
+      
+      <Form.Group>
+        <Form.Label>Date</Form.Label>
+        <Form.Control type="text"  name="date" placeholder="Date" onChange={handleChange} required />
       </Form.Group>
 
       <Button variant="primary" type="submit">

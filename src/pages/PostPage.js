@@ -11,6 +11,7 @@ const PostPage = () => {
       severity: '',
       assignedTo: '',
       status: 'Medication Not Taken',
+      date: ''
     })
 
     const {id} = useParams()

@@ -488,3 +488,4 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 
  2023-10-18
  -commented out most of the duplicate code on postRoutes and got new errors.
+ -pick up at the postController.js
