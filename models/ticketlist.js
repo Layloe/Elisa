@@ -22,7 +22,7 @@ assignedTo: {
 
 status: {
     type: String,
-    enum: ["Medication Taken", "Medication Not Taken"],
+    enum: ["Medication Taken", "Medication Not Taken"], //enum
     default: "Medication Not Taken"
 },
 date: {

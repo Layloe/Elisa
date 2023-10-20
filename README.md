@@ -489,3 +489,9 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  2023-10-18
  -commented out most of the duplicate code on postRoutes and got new errors.
  -pick up at the postController.js
+
+ 2023-10-19
+ -made changes to postController.js in attempt to debug posting to my db
+ -added content type to NewPostPage.js to test
+ -google errors when coming back
+ -when server.js is spread out, learn to see how it's spread out by comparing it to other projects

@@ -25,7 +25,7 @@ const NewPostPage = () => {
         try {
           // const response = 
           await axios.post('http://localhost:2121/posts/new', post)
-          // console.log('Created new post successfully:', response.data)
+          // console.log('Created new post successfully:', response.post)
           navigate('/')
         } catch (error) {
           console.error('Error creating post', error)
@@ -64,7 +64,7 @@ const NewPostPage = () => {
       
       <Form.Group>
         <Form.Label>Date</Form.Label>
-        <Form.Control type="text"  name="date" placeholder="Date" onChange={handleChange} required />
+        <Form.Control type="date"  name="date" placeholder="Date" onChange={handleChange} required />
       </Form.Group>
 
       <Button variant="primary" type="submit">

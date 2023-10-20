@@ -3,8 +3,30 @@ const axios = require('axios');
 
   // CREATE a new post
   exports.createPost = async (req, res) => {
+    const {
+      timeOfDay,
+      bloodPressure,
+      severity,
+      assignedTo,
+      status,
+      date,
+    } = req.body
+
+    if (!timeOfDay || !bloodPressure || !severity || !assignedTo || !date) {
+      return res
+        .status(400)
+        .json({ error: 'Missing required fields. Please provide all required information.' });
+    }
+
     try {
-      const newPost = new ticketList(req.body);
+      const newPost = new ticketList({
+        timeOfDay,
+        bloodPressure,
+        severity,
+        assignedTo,
+        status,
+        date,
+      });
       const savedPost = await newPost.save();
       const connectDB = 'http://localhost:2121'
       const response = await axios.post(`${connectDB}/posts/new`, newPost)
