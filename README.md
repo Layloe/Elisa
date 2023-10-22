@@ -501,3 +501,5 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 -going to address the mutible post issue
 -dropped the collection formdatas from mongodb
 -adding console logs n stuff
+- in my NewPostController I'm not getting back the console.log after making the inital post. This is a good place to start debugging.
+- the request console.log up. Good place to pick up here.
