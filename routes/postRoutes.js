@@ -5,8 +5,8 @@ const homeController = require('../controllers/home')
 const postController = require('../controllers/postController')
 
 //create 
-router.post('/new', (req) => {
-     postController.createPost(req)
+router.post('/new', (req,res) => {
+     postController.createPost(req, res)
 } )
 
 

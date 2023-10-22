@@ -495,3 +495,9 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -added content type to NewPostPage.js to test
  -google errors when coming back
  -when server.js is spread out, learn to see how it's spread out by comparing it to other projects
+*figure out why it posted a bagillion times to db
+
+20-10-22
+-going to address the mutible post issue
+-dropped the collection formdatas from mongodb
+-adding console logs n stuff

@@ -23,10 +23,23 @@ const NewPostPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-          // const response = 
+           console.log('SHOW ME WHAT YOU GOT!', post)
           await axios.post('http://localhost:2121/posts/new', post)
-          // console.log('Created new post successfully:', response.post)
+
+          console.log('Created new post successfully')
+
+          setPost({
+            timeOfDay: '',
+            bloodPressure: '',
+            severity: '',
+            assignedTo: '',
+            status: 'Medication Not Taken',
+            date: ''
+      
+          })
+
           navigate('/')
+
         } catch (error) {
           console.error('Error creating post', error)
         }

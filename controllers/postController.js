@@ -3,6 +3,7 @@ const axios = require('axios');
 
   // CREATE a new post
   exports.createPost = async (req, res) => {
+    console.log('Request received:', req.body);
     const {
       timeOfDay,
       bloodPressure,
@@ -30,6 +31,7 @@ const axios = require('axios');
       const savedPost = await newPost.save();
       const connectDB = 'http://localhost:2121'
       const response = await axios.post(`${connectDB}/posts/new`, newPost)
+      console.log('Response from axios.post:', response.data)
 
       res.status(201).json(savedPost);
     } catch (error) {

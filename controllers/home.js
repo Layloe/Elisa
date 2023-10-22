@@ -10,6 +10,7 @@ module.exports = {
             if (err) return res.status(500).json({ error: 'Internal server error' })
         }
     },
+    
     createTicket: async (req, res) => {
         const newTicket = new TicketList(
             {
@@ -31,6 +32,3 @@ module.exports = {
     },
 }
 
-// exports.getIndex = function(req, res) {
-//     res.render('index', { user: req.user });
-// };
