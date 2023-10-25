@@ -13,8 +13,8 @@ const editRoutes = require("./routes/edit")
 const User = require('./models/userModel')
 const userRoutes= require('./routes/userRoutes')
 const postRoutes = require('./routes/postRoutes') 
-// const NewPostRoutes = require('./routes/newPostRoutes')
-                     //?Testing here
+
+                     
 
 require('dotenv').config({path: './config/.env'})
 
