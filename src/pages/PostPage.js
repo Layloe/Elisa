@@ -20,14 +20,14 @@ const PostPage = () => {
         const fetchPost = async () => {
           try {
             const res = await axios.get(`http://localhost:2121/posts/${id}`) 
-            setPost(res.data.ticketList)    //? ticketList
+            setPost(res.data.ticketList)    
           } catch (error) {
             console.error('Error getting post', error)
           }
 
         }
         fetchPost()
-    },[id])
+    }, [id])
 
     return(
         <Container className='mt-4'>

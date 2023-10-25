@@ -81,7 +81,7 @@ const NewPostPage = () => {
         <Form.Control type="date"  name="date" placeholder="Date" onChange={handleChange} required />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="button" onClick={handleSubmit}>
         Create
       </Button>
     </Form>

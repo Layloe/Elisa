@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { Link } from "react-router-dom";
 import { Card, Button, Container, Row, Col } from 'react-bootstrap'
@@ -10,7 +10,7 @@ const HomePage = () => {
         const fetchPosts = async () => {
             try {
             const res = await axios.get(`http://localhost:2121/`) 
-            // console.log('API Response:', res.data)
+            console.log('API Response:', res.data)
             setPosts(res.data.ticketList)
             
             

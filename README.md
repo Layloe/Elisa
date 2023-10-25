@@ -507,3 +507,8 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 2023-10-23
 -frontend is broken ?_? was working yesterday oof
 -go to git to see history on how I broke it
+
+2023-10-24
+-finally found why my frontend was crashing by using githubs timeline
+-was an auto added import statment on NewPostPage.js
+- now back on fixing multi posts to api
