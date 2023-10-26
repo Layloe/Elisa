@@ -23,6 +23,7 @@ const NewPostPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        console.log('Handle submit function called')
         try {
            console.log('SHOW ME WHAT YOU GOT!', post)
           await axios.post('http://localhost:2121/posts/new', post)
@@ -81,7 +82,7 @@ const NewPostPage = () => {
         <Form.Control type="date"  name="date" placeholder="Date" onChange={handleChange} required />
       </Form.Group>
 
-      <Button variant="primary" type="button" onClick={handleSubmit}>
+      <Button variant="primary" type="submit">
         Create
       </Button>
     </Form>

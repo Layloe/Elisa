@@ -11,7 +11,7 @@ const connectDB = require("./config/database");
 const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
 const User = require('./models/userModel')
-const userRoutes= require('./routes/userRoutes')
+// const userRoutes= require('./routes/userRoutes')
 const postRoutes = require('./routes/postRoutes') 
 
                      
@@ -48,7 +48,7 @@ app.use((req,res,next) => {
 app.use('/', homeRoutes) 
 app.use('/posts', postRoutes)                
 app.use('/posts/:id', editRoutes)
-app.use('/', userRoutes)
+// app.use('/', userRoutes)
 
 
 //Start Server
