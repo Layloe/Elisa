@@ -1,19 +1,19 @@
-const express = require('express')
-const userController = require('../controllers/userController')
-const router = express.Router()
+// const express = require('express')
+// const userController = require('../controllers/userController')
+// const router = express.Router()
 
-router
-    .route('/login')
-    .get(userController.loginPage)
-    .post(userController.loginUser)
+// router
+//     .route('/login')
+//     .get(userController.loginPage)
+//     .post(userController.loginUser)
 
-router
-    .route('/register')
-    .get(userController.registerPage)
-    .post(userController.registerUser)
+// router
+//     .route('/register')
+//     .get(userController.registerPage)
+//     .post(userController.registerUser)
     
-router
-    .route('/logout')
-    .get(userController.loginUser)  
+// router
+//     .route('/logout')
+//     .get(userController.loginUser)  
     
-module.exports = router    
+// module.exports = router    
