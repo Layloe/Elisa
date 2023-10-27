@@ -28,7 +28,7 @@ const NewPostPage = () => {
            console.log('SHOW ME WHAT YOU GOT!', post)
           await axios.post('http://localhost:2121/posts/new', post)
 
-          console.log('Created new post successfully', response.data)
+          console.log('Created new post successfully')
 
           setPost({
             timeOfDay: '',

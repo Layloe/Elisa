@@ -5,12 +5,12 @@ const cors = require('cors')
 const PORT = 2121;
 const mongoose = require("mongoose")
 const session = require('express-session')
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
+// const passport = require('passport')
+// const LocalStrategy = require('passport-local').Strategy
 const connectDB = require("./config/database");
 const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
-const User = require('./models/userModel')
+// const User = require('./models/userModel')
 // const userRoutes= require('./routes/userRoutes')
 const postRoutes = require('./routes/postRoutes') 
 
@@ -31,18 +31,18 @@ app.use(session({
     saveUninitialized: false
 }))
 
-app.use(passport.initialize())
-app.use(passport.session())
+// app.use(passport.initialize())
+// app.use(passport.session())
 
-passport.use(new LocalStrategy(User.authenticate()))
-passport.serializeUser(User.serializeUser())
-passport.deserializeUser(User.deserializeUser())
+// passport.use(new LocalStrategy(User.authenticate()))
+// passport.serializeUser(User.serializeUser())
+// passport.deserializeUser(User.deserializeUser())
 
 //passing currentUser to all routes
-app.use((req,res,next) => {
-    res.locals.currentUser = req.user
-    next()
-})
+// app.use((req,res,next) => {
+//     res.locals.currentUser = req.user
+//     next()
+// })
 
 // Set Routes
 app.use('/', homeRoutes) 

@@ -29,9 +29,9 @@ const axios = require('axios');
         date,
       });
       const savedPost = await newPost.save();
-      const connectDB = 'http://localhost:2121'
-      const response = await axios.post(`${connectDB}/posts/new`, newPost)
-      console.log('Response from axios.post:', response.data)
+      // const connectDB = 
+      // const response = await axios.post('http://localhost:2121/posts/new', newPost)
+      // console.log('Response from axios.post:', response.data)
 
       res.status(201).json(savedPost);
     } catch (error) {
@@ -39,6 +39,7 @@ const axios = require('axios');
       res.status(500).json({ error: 'Internal server error' });
     }
   };
+
 
 exports.getAllPosts = async (req,res) => {
     try {

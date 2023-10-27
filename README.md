@@ -514,7 +514,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 - now back on fixing multi posts to api
 
 2023-10-25
--neighbors barking dog is annoying as shit
+
 -debug to multible form submits
 - added console.logs
 - commented out passport and anything to do with user's
