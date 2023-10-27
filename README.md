@@ -521,3 +521,5 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 - tested a bit with postman
 - need to address the enum in the schema  or comment it out for now
 - ask for help
+** res.status().json()   what does this do?
+** how to describe what axios.post does (e.g. "makes a http request with the POST method")
