@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap'
-// import { response } from "express";
+
 
 const NewPostPage = () => {
 

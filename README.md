@@ -511,15 +511,23 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 2023-10-24
 -finally found why my frontend was crashing by using githubs timeline
 -was an auto added import statment on NewPostPage.js
-- now back on fixing multi posts to api
+-now back on fixing multi posts to api
 
 2023-10-25
 
 -debug to multible form submits
-- added console.logs
-- commented out passport and anything to do with user's
-- tested a bit with postman
-- need to address the enum in the schema  or comment it out for now
-- ask for help
+-added console.logs
+-commented out passport and anything to do with user's
+-tested a bit with postman
+-need to address the enum in the schema  or comment it out for now
+-ask for help
 ** res.status().json()   what does this do?
 ** how to describe what axios.post does (e.g. "makes a http request with the POST method")
+
+2023-10-27
+** res.status().json()   what does this do?
+** how to describe what axios.post does (e.g. "makes a http request with the POST method")
+-merge my git branches so I get my green squares 
+-decide if I should add a calender libary or continue to tweek the form
+
+

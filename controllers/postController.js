@@ -29,9 +29,7 @@ const axios = require('axios');
         date,
       });
       const savedPost = await newPost.save();
-      // const connectDB = 
-      // const response = await axios.post('http://localhost:2121/posts/new', newPost)
-      // console.log('Response from axios.post:', response.data)
+
 
       res.status(201).json(savedPost);
     } catch (error) {
