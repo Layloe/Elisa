@@ -4,7 +4,7 @@ const express = require('express')
 const router = express.Router()
 const editController = require('../controllers/edit')
 
-router.get('/remove/:id', editController.deleteTicket) //? try '/posts/:id'
+router.get('/posts/:id', editController.deleteTicket) //? try '/posts/:id'
 router.get('/:id', editController.updateTicket)
 
 module.exports = router

@@ -10,6 +10,7 @@ const HomePage = () => {
         const fetchPosts = async () => {
             try {
             const res = await axios.get(`http://localhost:2121/`) 
+
             console.log('API Response:', res.data)
             setPosts(res.data.ticketList)
             
@@ -18,13 +19,15 @@ const HomePage = () => {
             console.error('Error fetching posts:', error);
           }
         }  
+        console.log('Fetching posts...')
         fetchPosts()
-        console.log(fetchPosts)
+        // console.log(fetchPosts)
     },[])
 
     const handleDelete = async (id) => {
         try {
             await axios.delete(`http://localhost:2121/posts/${id}`) //remove from DB
+            console.log(`Deleted post with ID ${id}`)
             setPosts(posts.filter((post) => post._id !== id)) //remove item from state
         } catch (error) {
             console.error('Error deleting post', error)
@@ -46,7 +49,7 @@ const HomePage = () => {
                   <Card.Text>Status: {post.status}</Card.Text>
                   <Card.Text>Date: {post.date}</Card.Text>
                   <Link to={`/posts/${post._id}`}>
-                    <Button variant="primary" className="mr-2">Read More</Button>
+                    <Button variant="primary" className="mr-2">EditThis</Button>
                   </Link>
                   <Button variant="danger" onClick={() => handleDelete(post._id)}>Delete</Button>
                 </Card.Body>
