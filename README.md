@@ -530,7 +530,8 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 
 2023-10-29
 -work on the delete route
--adding console logs
+-adding console logs to help debug
 -switching to edit route  
+-need to create an new edit component 
 
 
