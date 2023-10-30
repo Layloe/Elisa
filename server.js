@@ -9,7 +9,7 @@ const session = require('express-session')
 // const LocalStrategy = require('passport-local').Strategy
 const connectDB = require("./config/database");
 const homeRoutes = require("./routes/home")
-const editRoutes = require("./routes/edit")
+// const editRoutes = require("./routes/edit")
 // const User = require('./models/userModel')
 // const userRoutes= require('./routes/userRoutes')
 const postRoutes = require('./routes/postRoutes') 
@@ -47,7 +47,7 @@ app.use(session({
 // Set Routes
 app.use('/', homeRoutes) 
 app.use('/posts', postRoutes)                
-app.use('/posts/:id', editRoutes)
+app.use('/posts/:id',postRoutes) //changed editRoutes for testing
 // app.use('/', userRoutes)
 
 

@@ -1,10 +1,10 @@
 //This route will handle editing and deleting items, as well as rendering the edit page itself
 
-const express = require('express')
-const router = express.Router()
-const editController = require('../controllers/edit')
+// const express = require('express')
+// const router = express.Router()
+// const editController = require('../controllers/edit')
 
-router.get('/posts/:id', editController.deleteTicket) //? try '/posts/:id'
-router.get('/:id', editController.updateTicket)
+// router.get('/posts/:id', editController.deleteTicket) //? try '/posts/:id'
+// router.get('/:id', editController.updateTicket)
 
-module.exports = router
+// module.exports = router

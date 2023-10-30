@@ -9,5 +9,7 @@ router.post('/new', (req,res) => {
      postController.createPost(req, res)
 } )
 
-
+router.delete('/posts/:id', postController.deleteTicket) //? try '/posts/:id'
+router.put('/:id', postController.updateTicket)  //? Changed to delete and put
+  
 module.exports = router

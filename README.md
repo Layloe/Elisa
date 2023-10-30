@@ -533,5 +533,11 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 -adding console logs to help debug
 -switching to edit route  
 -need to create an new edit component 
+-check past projects 
 
-
+2023-10-30
+-power went out yesterday, oof
+-deciding if I need an edit route and going over how I would incorperate an edit route 
+-console out the edit route and testing postRoutes instead
+-changed the postRoutes router to include put and delete
+-when I get back test to see if it runs  
