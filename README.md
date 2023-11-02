@@ -541,3 +541,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
 -console out the edit route and testing postRoutes instead
 -changed the postRoutes router to include put and delete
 -when I get back test to see if it runs  
+ 
+ 2023-11-2
+ -updating postRoutes and postController to make dry
+ -fix errors

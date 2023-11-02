@@ -1,5 +1,5 @@
 const ticketList = require('../models/ticketlist')
-// const axios = require('axios');
+const axios = require('axios');
 
   // CREATE a new post
   exports.createPost = async (req, res) => {
@@ -73,6 +73,17 @@ exports.getAllPosts = async (req,res) => {
       res.status(500).json({ error: 'Internal server error' });
     }
   };
+
+  // UPDATE a post by ID
+  exports.updatePost = async (req,res) => {
+    try {
+      await ticketList.findByIdAndUpdate(req.params.id, req.body)
+      res.status(200).send('Post updated')
+    } catch (error) {
+      console.error('Error updating post:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  }
 
   // module.exports = {
   //   getIndex : async (req, res) => {
