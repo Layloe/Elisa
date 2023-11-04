@@ -545,3 +545,10 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  2023-11-2
  -updating postRoutes and postController to make dry
  -fix errors
+
+ 2023-11-04
+ -checking for typos
+ -updating routes
+ -review postContrller.js functions and inspect the way I set up my new post function and how it interacts with the rest of the functions.
+ -postController.getPostById is also a point of intrest 
+ -getting closer, keep it up!                    
