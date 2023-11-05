@@ -35,7 +35,7 @@ const NewPostPage = () => {
             bloodPressure: '',
             severity: '',
             assignedTo: '',
-            status: 'Medication Not Taken',
+            status: 'Medication Taken',
             date: ''
       
           })

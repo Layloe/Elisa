@@ -2,51 +2,42 @@ const ticketList = require('../models/ticketlist')
 const axios = require('axios');
 
   // CREATE a new post
+
   exports.createPost = async (req, res) => {
+    console.log('Request received:', req.body);
+    const {
+      timeOfDay,
+      bloodPressure,
+      severity,
+      assignedTo,
+      status,
+      date,
+    } = req.body
+
+    if (!timeOfDay || !bloodPressure || !severity || !assignedTo || !date) {
+      return res
+        .status(400)
+        .json({ error: 'Missing required fields. Please provide all required information.' });
+    }
+
     try {
-      const newPost = new ticketList(req.body);
+      const newPost = new ticketList({
+        timeOfDay,
+        bloodPressure,
+        severity,
+        assignedTo,
+        status,
+        date,
+      });
       const savedPost = await newPost.save();
+
+
       res.status(201).json(savedPost);
     } catch (error) {
       console.error('Error creating a new post:', error);
       res.status(500).json({ error: 'Internal server error' });
     }
   };
-  // exports.createPost = async (req, res) => {
-  //   console.log('Request received:', req.body);
-  //   const {
-  //     timeOfDay,
-  //     bloodPressure,
-  //     severity,
-  //     assignedTo,
-  //     status,
-  //     date,
-  //   } = req.body
-
-  //   if (!timeOfDay || !bloodPressure || !severity || !assignedTo || !date) {
-  //     return res
-  //       .status(400)
-  //       .json({ error: 'Missing required fields. Please provide all required information.' });
-  //   }
-
-  //   try {
-  //     const newPost = new ticketList({
-  //       timeOfDay,
-  //       bloodPressure,
-  //       severity,
-  //       assignedTo,
-  //       status,
-  //       date,
-  //     });
-  //     const savedPost = await newPost.save();
-
-
-  //     res.status(201).json(savedPost);
-  //   } catch (error) {
-  //     console.error('Error creating a new post:', error);
-  //     res.status(500).json({ error: 'Internal server error' });
-  //   }
-  // };
 
 
 exports.getAllPosts = async (req,res) => {
@@ -59,6 +50,17 @@ exports.getAllPosts = async (req,res) => {
     }
 }
 
+// exports.createPost = async (req, res) => {
+//   try {
+//     const newPost = new ticketList(req.body);
+//     const savedPost = await newPost.save();
+//     res.status(201).json(savedPost);
+//   } catch (error) {
+//     console.error('Error creating a new post:', error);
+//     res.status(500).json({ error: 'Internal server error' });
+//   }
+// };
+
 // GET a specific post by ID
    exports.getPostById = async (req, res) => {
     try {
@@ -66,7 +68,7 @@ exports.getAllPosts = async (req,res) => {
       if (!post) {
         return res.status(404).json({ error: 'Post not found' });
       }
-      res.send(post);
+      res.send(post);                                                       
     } catch (error) {
       console.error('Error fetching post by ID:', error);
       res.status(500).json({ error: 'Internal server error' });
