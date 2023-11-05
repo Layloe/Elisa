@@ -558,3 +558,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -edit.js, home.js, and postController.js are to be put into one doc
  -doing this will not only make my code dry it will also make it easier to read
  -easier said then done, prepare for a wave of errors
+ -made route and controller changes
+ -getting route errors but /posts/new seems to be working
+ -navbar working at /posts but not at /
+ -
