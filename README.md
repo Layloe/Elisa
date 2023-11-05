@@ -551,4 +551,10 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -updating routes
  -review postContrller.js functions and inspect the way I set up my new post function and how it interacts with the rest of the functions.
  -postController.getPostById is also a point of intrest 
- -getting closer, keep it up!                    
+ -getting closer, keep it up!      
+
+ 2023-11-5
+ -edit.js, home.js, and postRoutes.js are to be put into one doc
+ -edit.js, home.js, and postController.js are to be put into one doc
+ -doing this will not only make my code dry it will also make it easier to read
+ -easier said then done, prepare for a wave of errors

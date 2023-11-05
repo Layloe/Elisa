@@ -8,12 +8,12 @@ const session = require('express-session')
 // const passport = require('passport')
 // const LocalStrategy = require('passport-local').Strategy
 const connectDB = require("./config/database");
-const homeRoutes = require("./routes/home")
+// const homeRoutes = require("./routes/home")
 // const editRoutes = require("./routes/edit")
 // const User = require('./models/userModel')
 // const userRoutes= require('./routes/userRoutes')
-const postRoutes = require('./routes/postRoutes') 
-
+// const postRoutes = require('./routes/postRoutes') 
+const testRoutes = require('./routes/testRoutes')
                      
 
 require('dotenv').config({path: './config/.env'})
@@ -45,9 +45,9 @@ app.use(session({
 // })
 
 // Set Routes
-app.use('/', homeRoutes) 
-app.use('/posts', postRoutes)                
-app.use('/posts/:id',postRoutes) //changed editRoutes for testing
+app.use('/', testRoutes) 
+app.use('/posts', testRoutes)                
+app.use('/posts/:id',testRoutes) //changed editRoutes for testing
 // app.use('/', userRoutes)
 
 
