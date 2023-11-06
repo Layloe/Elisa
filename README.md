@@ -553,7 +553,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -postController.getPostById is also a point of intrest 
  -getting closer, keep it up!      
 
- 2023-11-5
+ 2023-11-05
  -edit.js, home.js, and postRoutes.js are to be put into one doc
  -edit.js, home.js, and postController.js are to be put into one doc
  -doing this will not only make my code dry it will also make it easier to read
@@ -561,4 +561,7 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -made route and controller changes
  -getting route errors but /posts/new seems to be working
  -navbar working at /posts but not at /
+ 
+ 2023-11-06
+ -added conditional rendering to HomePage.js to avoid errors
  -

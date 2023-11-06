@@ -38,7 +38,8 @@ const HomePage = () => {
         <Container>
         <Row>
         
-        {posts.map((post) => (
+        {posts ? (
+          posts.map((post) => (
             <Col md={4} className="mb-4" key={post._id}>
               <Card style={{ width: '18rem' }}>
                 <Card.Body>
@@ -57,7 +58,10 @@ const HomePage = () => {
                 
             </Col>
 
-             ))}
+             ))
+          ) : (
+              <p>Loading...</p>
+            )}
 
             </Row>
         </Container>
