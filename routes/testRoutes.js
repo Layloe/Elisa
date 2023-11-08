@@ -3,19 +3,29 @@ const router = express.Router();
 const testController = require('../controllers/testController.js');
 
 // Fetch all posts
-router.get('/', testController.getAllPosts);
-// router.get('/posts', testController.getAllPosts);  //? changed '/posts' to '/'
+router
+    .route('/')
+    .get(testController.getAllPosts)
 
 // Create a new post
-router.post('/posts/new', testController.createPost);
+router
+    .route('/posts/new')
+    .post(testController.createPost)
 
-// Delete a post by ID
-router.delete('/posts/:id', testController.deletePostById);
 
 // Get a specific post by ID
-router.get('/posts/:id', testController.getPostById);                  
+router
+    .route('/posts/:id')
+    .get(testController.getPostById)                  
 
 // Update a post by ID
-router.post('/posts/:id', testController.updatePost);
+router
+    .route('/posts/:id')
+    .post(testController.updatePost)
+
+// Delete a post by ID
+router
+    .route('/posts/:id')
+    .post(testController.deletePostById);
 
 module.exports = router;

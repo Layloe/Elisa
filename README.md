@@ -569,4 +569,10 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   2023-11-07
   -adding console logs
   -posts not rendering 
-  -
+  
+  2023-11-08
+  -changed testRoutes to be easier to read
+  -what functions is resposible for rendering the page. It sound like react but the react rendered the posts before I started changing the routes.
+  -I have a feeling it has something to do with my testController or the interaction between routes
+  -this seems easier then I'm making it but I'm definitly learning since I feel dumb and out of my element.
+  -pick up here: in testController.js, verify that functions like getAllPosts correctly query the database and return the expected data

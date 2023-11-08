@@ -1,5 +1,19 @@
 const ticketList = require('../models/ticketlist');
 
+
+
+// Fetch all posts
+exports.getAllPosts = async (req, res) => {
+  // console.log('req received:', req)
+  try {
+    const posts = await ticketList.find()
+    res.send(posts)
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};
+
 // CREATE a new post
 exports.createPost = async (req, res) => {
   console.log('Request received:', req.body);
@@ -36,17 +50,7 @@ exports.createPost = async (req, res) => {
   }
 };
 
-// Fetch all posts
-exports.getAllPosts = async (req, res) => {
-  // console.log('req received:', req)
-  try {
-    const posts = await ticketList.find();
-    res.send(posts);
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-};
+
 
 // Get a specific post by ID
 exports.getPostById = async (req, res) => {

@@ -22,7 +22,7 @@ const HomePage = () => {
         // console.log('Fetching posts...')
         fetchPosts()
         console.log('posts state after fetch:', posts)
-    },[posts])
+    },[])
 
     const handleDelete = async (id) => {
         try {
