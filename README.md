@@ -564,4 +564,9 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  
  2023-11-06
  -added conditional rendering to HomePage.js to avoid errors
- -
+ -finish up routing errors start with '/' instead of 'posts' in server.js
+
+  2023-11-07
+  -adding console logs
+  -posts not rendering 
+  -

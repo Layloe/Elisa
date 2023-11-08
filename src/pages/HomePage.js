@@ -19,10 +19,10 @@ const HomePage = () => {
             console.error('Error fetching posts:', error);
           }
         }  
-        console.log('Fetching posts...')
+        // console.log('Fetching posts...')
         fetchPosts()
-        // console.log(fetchPosts)
-    },[])
+        console.log('posts state after fetch:', posts)
+    },[posts])
 
     const handleDelete = async (id) => {
         try {

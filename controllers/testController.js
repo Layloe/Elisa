@@ -38,6 +38,7 @@ exports.createPost = async (req, res) => {
 
 // Fetch all posts
 exports.getAllPosts = async (req, res) => {
+  // console.log('req received:', req)
   try {
     const posts = await ticketList.find();
     res.send(posts);
@@ -49,6 +50,7 @@ exports.getAllPosts = async (req, res) => {
 
 // Get a specific post by ID
 exports.getPostById = async (req, res) => {
+  console.log('req id:', req.params.id)
   try {
     const post = await ticketList.findById(req.params.id);
     if (!post) {
