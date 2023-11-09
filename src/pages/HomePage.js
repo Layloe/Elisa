@@ -9,10 +9,10 @@ const HomePage = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-            const res = await axios.get(`http://localhost:2121/`) 
+            const res = await axios.get(`http://localhost:2121/posts`) 
 
-            console.log('API Response:', res.data)
-            setPosts(res.data.ticketList)
+            console.log('DB Response:', res.data)
+            setPosts(res.data)  //! testing res.data.ticketList
             
             
         } catch (error) {
@@ -21,7 +21,7 @@ const HomePage = () => {
         }  
         // console.log('Fetching posts...')
         fetchPosts()
-        console.log('posts state after fetch:', posts)
+        console.log('Fetching posts...', posts)
     },[])
 
     const handleDelete = async (id) => {

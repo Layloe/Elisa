@@ -3,6 +3,8 @@ const router = express.Router();
 const testController = require('../controllers/testController.js');
 
 // Fetch all posts
+
+// router.get('/', testController.getAllPosts)
 router
     .route('/')
     .get(testController.getAllPosts)

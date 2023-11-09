@@ -45,7 +45,7 @@ app.use(session({
 // })
 
 // Set Routes
-app.use('/', testRoutes) 
+app.use('/posts', testRoutes) 
 // app.use('/posts/new', testRoutes)                
 // app.use('/posts/:id',testRoutes) //changed editRoutes for testing
 // app.use('/', userRoutes)

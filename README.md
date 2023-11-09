@@ -576,3 +576,9 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -I have a feeling it has something to do with my testController or the interaction between routes
   -this seems easier then I'm making it but I'm definitly learning since I feel dumb and out of my element.
   -pick up here: in testController.js, verify that functions like getAllPosts correctly query the database and return the expected data
+  -use postman to test
+
+  2023-11-09
+  -made changes to HomePage.js to allow the posts to be displayed
+  -these changes created an err when making a new post
+  -pick up here
