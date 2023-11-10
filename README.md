@@ -582,3 +582,5 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -made changes to HomePage.js to allow the posts to be displayed
   -these changes created an err when making a new post
   -pick up here
+  -fixed /new  and delete route
+  

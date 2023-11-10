@@ -8,11 +8,9 @@ const session = require('express-session')
 // const passport = require('passport')
 // const LocalStrategy = require('passport-local').Strategy
 const connectDB = require("./config/database");
-// const homeRoutes = require("./routes/home")
 // const editRoutes = require("./routes/edit")
 // const User = require('./models/userModel')
-// const userRoutes= require('./routes/userRoutes')
-// const postRoutes = require('./routes/postRoutes') 
+// const userRoutes= require('./routes/userRoutes') 
 const testRoutes = require('./routes/testRoutes')
                      
 
