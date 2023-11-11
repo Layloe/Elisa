@@ -48,32 +48,32 @@ const EditPostPage = () => {
         <Form onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Time of Day</Form.Label>
-            <Form.Control type="text" name="timeOfDay" placeholder="Time of Day" onChange={handleChange} required />
+            <Form.Control type="text" name="timeOfDay" value={post.timeOfDay} onChange={handleChange} required />
           </Form.Group>
     
           <Form.Group>
             <Form.Label>Blood Pressure</Form.Label>
-            <Form.Control type="text" name="bloodPressure" placeholder="Blood Pressure" onChange={handleChange} required />
+            <Form.Control type="text" name="bloodPressure" value={post.bloodPressure} onChange={handleChange} required />
           </Form.Group>
     
           <Form.Group>
             <Form.Label>Severity</Form.Label>
-            <Form.Control type="text" name="severity" placeholder="Severity" onChange={handleChange} required />
+            <Form.Control type="text" name="severity" value={post.severity} onChange={handleChange} required />
           </Form.Group>
     
           <Form.Group>
             <Form.Label>Assign To</Form.Label>
-            <Form.Control type="text" rows={5} name="assignedTo" placeholder="Assigned To" onChange={handleChange} required />
+            <Form.Control type="text" rows={5} name="assignedTo" value={post.assignedTo} onChange={handleChange} required />
           </Form.Group>
     
           <Form.Group>
             <Form.Label>Status</Form.Label>
-            <Form.Control type="text"  name="status" placeholder="Status" onChange={handleChange} required />
+            <Form.Control type="text"  name="status" value={post.status} onChange={handleChange} required />
           </Form.Group>
           
           <Form.Group>
             <Form.Label>Date</Form.Label>
-            <Form.Control type="date"  name="date" placeholder="Date" onChange={handleChange} required />
+            <Form.Control type="date"  name="date" value={post.date} onChange={handleChange} required />
           </Form.Group>
     
           <Button variant="primary" type="submit">
