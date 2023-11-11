@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage'
 import PostPage from './pages/PostPage'
 import NewPostPage from "./pages/NewPostPage";
 import NavBar from './components/NavBar'
+import EditPostPage from "./pages/EditPostPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />             //? test with '/posts' 
         <Route path="/posts/new" element={<NewPostPage />} />
         <Route path="/posts/:id" element={<PostPage />} />
+        <Route path="/posts/edit/:id" element={<EditPostPage />} />
       </Routes>
     </Router>
   );

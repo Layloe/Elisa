@@ -17,6 +17,9 @@ const NavBar = () => {
           <LinkContainer to="/posts/new">
             <Nav.Link>Create Post</Nav.Link>
           </LinkContainer>
+          <LinkContainer to="/posts/edit/:id">
+            <Nav.Link>Edit Post</Nav.Link>
+          </LinkContainer>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

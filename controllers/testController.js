@@ -79,8 +79,11 @@ exports.deletePostById = async (req, res) => {
 // UPDATE a post by ID
 exports.updatePost = async (req, res) => {
   try {
-    await ticketList.findByIdAndUpdate(req.params.id, req.body);
-    res.status(200).send('Post updated');
+   const updatePost = await ticketList.findByIdAndUpdate(req.params.id, req.body, { new: true})
+   if (!updatePost) {
+    return res.status(404).send('Post not found')
+   }
+    res.send(updatePost)
   } catch (error) {
     console.error('Error updating post:', error);
     res.status(500).json({ error: 'Internal server error' });

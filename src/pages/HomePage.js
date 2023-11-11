@@ -49,7 +49,7 @@ const HomePage = () => {
                   <Card.Text>Assigned To: {post.assignedTo}</Card.Text>
                   <Card.Text>Status: {post.status}</Card.Text>
                   <Card.Text>Date: {post.date}</Card.Text>
-                  <Link to={`/posts/${post._id}`}>
+                  <Link to={`/posts/edit/${post._id}`}>
                     <Button variant="primary" className="mr-2">EditThis</Button>
                   </Link>
                   <Button variant="danger" onClick={() => handleDelete(post._id)}>Delete</Button>
