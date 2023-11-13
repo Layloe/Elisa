@@ -588,4 +588,6 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -added EditPostPage.js component
   -updated App.js with edit path navbar
   -need to change placeholder to store past imputs
+  -re add passport
+
 
