@@ -14,6 +14,12 @@ const NavBar = () => {
           <LinkContainer to="/">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
+          <LinkContainer to="/login">
+            <Nav.Link>Login</Nav.Link>
+          </LinkContainer>
+          <LinkContainer to="/register">
+            <Nav.Link>Register</Nav.Link>
+          </LinkContainer>
           <LinkContainer to="/posts/new">
             <Nav.Link>Create Post</Nav.Link>
           </LinkContainer>

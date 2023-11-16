@@ -5,16 +5,23 @@ import PostPage from './pages/PostPage'
 import NewPostPage from "./pages/NewPostPage";
 import NavBar from './components/NavBar'
 import EditPostPage from "./pages/EditPostPage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage"
+// import Logout from "./pages/Logout"
+
 
 function App() {
   return (
     <Router>
       <NavBar /> 
       <Routes>
-        <Route path="/" element={<HomePage />} />             //? test with '/posts' 
+        <Route path="/" element={<HomePage />} />             
         <Route path="/posts/new" element={<NewPostPage />} />
         <Route path="/posts/:id" element={<PostPage />} />
         <Route path="/posts/edit/:id" element={<EditPostPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        {/* <Route path="/logout" element={<Logout />} /> */}
       </Routes>
     </Router>
   );

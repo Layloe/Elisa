@@ -590,4 +590,14 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -need to change placeholder to store past imputs
   -re add passport
 
+  2023-11-14
+  -added Login component
+  -adding Register componet
+
+  2023-11-14
+  -adding routes/components and styling
+  -hands hurt oof
+
+  
+
 
