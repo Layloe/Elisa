@@ -594,9 +594,14 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -added Login component
   -adding Register componet
 
-  2023-11-14
+  2023-11-15
   -adding routes/components and styling
   -hands hurt oof
+
+  2023-11-16
+  -adding bootstrap to components
+  -look into calender libaries
+  -pick up on register page
 
   
 
