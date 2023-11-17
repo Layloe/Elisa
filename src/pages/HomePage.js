@@ -12,7 +12,7 @@ const HomePage = () => {
             const res = await axios.get(`http://localhost:2121/posts`) 
 
             console.log('DB Response:', res.data)
-            setPosts(res.data)  //! testing res.data.ticketList
+            setPosts(res.data)  
             
             
         } catch (error) {
@@ -33,6 +33,13 @@ const HomePage = () => {
             console.error('Error deleting post', error)
         }
     }
+    const handleChange = async () => {
+    try {
+        await axios.get('http://localhost:2121/logout', {withCredentials: true})
+    } catch (error) {
+        console.error('Logout failed:', error)
+    }
+}
 
     return(
         <Container>

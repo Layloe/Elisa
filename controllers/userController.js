@@ -2,15 +2,15 @@ const passport = require('passport')
 const User = require('../models/userModel')
 
 const loginPage = (req,res) => {
-    res.render('login')
+    res.send({ message: 'Login page'})
 }
 
 const registerPage = (req,res) => {
-    res.render('register')
+    res.send({ message: 'Register page'})
 }
 
 const loginUser = passport.authenticate('local',{
-    successRedirect: '/',
+    successRedirect: '/posts',
     failureRedirect: '/login',
     failureFlash: false
 })
@@ -21,7 +21,7 @@ const registerUser = async (req,res) => {
         const user = new User({username})
         await User.register(user,password)
         passport.authenticate('local')(req,res, function() {
-            res.redirect('/')
+            res.redirect('/login')
         })
 
     }catch (err) {

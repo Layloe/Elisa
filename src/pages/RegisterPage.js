@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 
 const RegisterPage = ({onRegister}) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -13,7 +15,8 @@ const RegisterPage = ({onRegister}) => {
              { username, password },
              { withCredentials: true }
             )
-            onRegister(res.data)
+            // onRegister(res.data)
+            navigate('/login')
 
         } catch (error) {
             console.error('Registration failed:', error)

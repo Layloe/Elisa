@@ -6,17 +6,20 @@ import { Card, Button, Container, Row, Col, Form } from 'react-bootstrap'
 const LoginPage = ({onLogin}) => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-
     const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
-        e.preverntDefault()
+        e.preventDefault()
+        console.log(handleSubmit)
         try {
             const res = await axios.post('http://localhost:2121/login', 
+
             { username, password },
             { withCredentials: true }
             )
-            onLogin(res.data).navigate('/posts')
+            // onLogin(res.data).
+            navigate('/posts')
+            console.log('Login Successful')
             
         } catch (error) {
             console.error('Login failed:', error)  

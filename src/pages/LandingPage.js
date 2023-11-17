@@ -12,7 +12,7 @@ const LandingPage = () => {
                         <Card.Body>
                             <Card.Title>Welcome to the Elisa App</Card.Title>
                             <Link to="/login" className="btn btn-primary mx-2">Login</Link>
-                            <Link to="/register" className="btn btn-secondary mx-2">Register</Link>
+                            <Link to="/register" className="btn btn-danger mx-2">Register</Link>
                         </Card.Body>
                     </Card>
                 </Col>
