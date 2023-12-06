@@ -31,7 +31,7 @@
 
 //? Labetalol HCl 200 mg Tablet: This medication is a beta-blocker that is used to treat high blood pressure by slowing down the heart rate and reducing the workload on the heart.
 
-//? Olmesartan Medoxomil 40 mg Tab: This medication is an angiotensin receptor blocker that is used to treat high blood pressure by relaxing blood vessels and lowering blood pressure.
+//? Olmesartan Medoxomil 40 mg Tab: This medication is an angiotensin recerelaxing blood vessels and lowering blood pressure.ptor blocker that is used to treat high blood pressure by 
 
 //? Hydralazine 100 mg Tablet: This medication is a vasodilator that is used to treat high blood pressure by relaxing blood vessels.
 

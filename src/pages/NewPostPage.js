@@ -40,7 +40,7 @@ const NewPostPage = () => {
       
           })
 
-          navigate('/')
+          navigate('/posts') //! '/posts'
 
         } catch (error) {
           console.error('Error creating post', error)

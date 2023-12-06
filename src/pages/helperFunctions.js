@@ -1,13 +1,13 @@
-// import React, { useState } from 'react';
 
-function getDayOfWeek(dateString) {
+
+export function getDayOfWeek(dateString) {
   const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   const date = new Date(dateString);
   const dayOfWeekIndex = date.getUTCDay();
   return daysOfWeek[dayOfWeekIndex]
 }
 
-function getTimeOfDay(dateString) {
+export function getTimeOfDay(dateString) {
   const myDate = new Date(dateString),
     hours = myDate.getUTCHours()
 
@@ -20,7 +20,7 @@ function getTimeOfDay(dateString) {
   }
 }
 
-function assignDayOfWeek(list) {
+export function assignDayOfWeek(list) {
   const dateProp =  list.map((value) => ({
     date: value.date,
     dayOfWeek: getDayOfWeek(value.date)
@@ -29,7 +29,7 @@ function assignDayOfWeek(list) {
   return dateProp
 }
 
-function assignTimeOfDay(list) {
+export function assignTimeOfDay(list) {
   const timeOf =  list.map((value) => ({
     date: value.date,
     dayOfWeek: getDayOfWeek(value.date),
@@ -39,7 +39,7 @@ function assignTimeOfDay(list) {
   return timeOf
 }
 
-function groupByDay(list) {
+export function groupByDay(list) {
   let groupsSplit = []
   let group = []
 
@@ -61,7 +61,7 @@ function groupByDay(list) {
   return groupsSplit
 }
 
-function groupByWeek(list) {
+export function groupByWeek(list) {
   const weeks = [];
   let currentWeek = [];
 
@@ -86,6 +86,8 @@ function groupByWeek(list) {
 
   return weeks;
 }
+
+export default helperFunctions
 
 // function BloodPressureTracker({ data }) {
 //   const [selectedWeekIndex, setSelectedWeekIndex] = useState(0);

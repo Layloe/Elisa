@@ -602,7 +602,22 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
   -adding bootstrap to components
   -look into calender libaries
   -pick up on register page
-
+ 
+ 2023-11-21
+ -reviewing and then thinking when to start working on these steps
+ -document version of MVP 
+ -day see data scroll month
+ -how date with a today window or form
+ -collapsible past info on the day 3x
+ -figure out how to structure data 3x a day
+ -add extra form for day of the week that contains a container that has 3x form
   
+ -look into navagating to posts page after creating new post
+
+ 2023-11-29
+ -back in the sattle with my app
+ -trying to group into 3x day then week
+ -add PostsDisplay.js to home review and fix bugs
+ -move helperFunctions.js
 
 
