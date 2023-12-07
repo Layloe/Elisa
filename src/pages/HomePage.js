@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios'
+import { getDayOfWeek, getTimeOfDay, assignDayOfWeek, assignTimeOfDay, groupByDay, groupByWeek } from './helperFunctions'
+import PostsDisplay from './PostsDisplay'
 import { Link } from "react-router-dom";
 import { Card, Button, Container, Row, Col } from 'react-bootstrap'
-import { getDayOfWeek, getTimeOfDay, assignDayOfWeek, assignTimeOfDay, groupByDay, groupByWeek } from './helperFunctions'
+
 
 
 const HomePage = () => {
     const [posts, setPosts] = useState([])
+    console.log('Posts state:', posts)
 
     useEffect(() => {
         const fetchPosts = async () => {
@@ -15,13 +18,16 @@ const HomePage = () => {
 
             console.log('DB Response:', res.data)
             setPosts(res.data)  
-            
+            const postsTimeOfDay = assignTimeOfDay(posts)
+            const postsGroupedByDay = groupByDay(postsTimeOfDay)
+            const postsGroupedByWeek = groupByWeek(postsGroupedByDay)
+            setPosts(postsGroupedByWeek)
             
         } catch (error) {
             console.error('Error fetching posts:', error);
           }
         }  
-        // console.log('Fetching posts...')
+        
         fetchPosts()
         console.log('Fetching posts...', posts)
     },[])
@@ -35,7 +41,7 @@ const HomePage = () => {
             console.error('Error deleting post', error)
         }
     }
-    const handleChange = async () => {
+    const handleLogout = async () => {
     try {
         await axios.get('http://localhost:2121/logout', {withCredentials: true})
     } catch (error) {
@@ -44,37 +50,17 @@ const HomePage = () => {
 }
 
     return(
-        <Container>
-        <Row>
-        
-        {posts ? (
-          posts.map((post) => (
-            <Col md={4} className="mb-4" key={post._id}>
-              <Card style={{ width: '18rem' }}>
-                <Card.Body>
-                  <Card.Title>Time of Day: {post.timeOfDay}</Card.Title>
-                  <Card.Text>Blood Pressure: {post.bloodPressure}</Card.Text>
-                  <Card.Text>Severity: {post.severity}</Card.Text>
-                  <Card.Text>Assigned To: {post.assignedTo}</Card.Text>
-                  <Card.Text>Status: {post.status}</Card.Text>
-                  <Card.Text>Date: {post.date}</Card.Text>
-                  <Link to={`/posts/edit/${post._id}`}>
-                    <Button variant="primary" className="mr-2">EditThis</Button>
-                  </Link>
-                  <Button variant="danger" onClick={() => handleDelete(post._id)}>Delete</Button>
-                </Card.Body>
-              </Card>
-                
-            </Col>
-
-             ))
-          ) : (
-              <p>Loading...</p>
-            )}
-
-            </Row>
-        </Container>
+      <div>
+        <PostsDisplay
+          posts={posts}
+          onDelete={handleDelete}
+          onLogout={handleLogout}
+        />
+      </div>
     )
+
 }
 
 export default HomePage
+
+

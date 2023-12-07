@@ -620,4 +620,12 @@ Going to try to debug my HomePage.js and try to get all posts to display. Asked 
  -add PostsDisplay.js to home review and fix bugs
  -move helperFunctions.js
 
+2023-12-05
+intigrate helperFunctions.js and PostsDisplay.js into HomePage
+
+2023-12-06
+-make react run wit new component
+-once working make react dry
+
+
 

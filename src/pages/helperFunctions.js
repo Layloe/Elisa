@@ -87,7 +87,7 @@ export function groupByWeek(list) {
   return weeks;
 }
 
-export default helperFunctions
+
 
 // function BloodPressureTracker({ data }) {
 //   const [selectedWeekIndex, setSelectedWeekIndex] = useState(0);
