@@ -627,5 +627,14 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 -make react run wit new component
 -once working make react dry
 
+2023-12-07
+-debug display issue,
+
+2023-12-08
+-left off on HomePage, make sure to revert changes
+-check map in PostsDisplay
+-console logs/ 
+-all
+
 
 

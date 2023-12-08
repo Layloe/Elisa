@@ -20,6 +20,9 @@ const NavBar = () => {
           <LinkContainer to="/register">
             <Nav.Link>Register</Nav.Link>
           </LinkContainer>
+          <LinkContainer to={'/posts'}>
+            <Nav.Link>Posts</Nav.Link>
+          </LinkContainer>
           <LinkContainer to="/posts/new">
             <Nav.Link>Create Post</Nav.Link>
           </LinkContainer>

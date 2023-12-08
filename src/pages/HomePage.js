@@ -9,19 +9,22 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap'
 
 const HomePage = () => {
     const [posts, setPosts] = useState([])
-    console.log('Posts state:', posts)
+    
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
             const res = await axios.get(`http://localhost:2121/posts`) 
 
-            console.log('DB Response:', res.data)
-            setPosts(res.data)  
+            // console.log('DB Response:', res.data)
+            // setPosts(res.data)  
+            // console.log('Posts state:', posts)
+            const processedPosts = assignTimeOfDay(res.data)
             const postsTimeOfDay = assignTimeOfDay(posts)
             const postsGroupedByDay = groupByDay(postsTimeOfDay)
             const postsGroupedByWeek = groupByWeek(postsGroupedByDay)
-            setPosts(postsGroupedByWeek)
+            setPosts(processedPosts)
+            
             
         } catch (error) {
             console.error('Error fetching posts:', error);
