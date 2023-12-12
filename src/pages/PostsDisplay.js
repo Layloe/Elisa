@@ -8,7 +8,7 @@ const PostsDisplay = ({ posts, onDelete, onLogout }) => {
         <Container>
             {posts.map((week, weekIndex) => (
                 <Row key={`week-${weekIndex}`}>
-                    {week.map((day, dayIndex) (
+                    {week.map((day, dayIndex) => (
                         <Col key={`day-${dayIndex}`} md={4}>
                             <h3>{day[0].dayOfWeek}</h3>
                             {day.map((post, postIndex) => (

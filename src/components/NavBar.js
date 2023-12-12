@@ -11,7 +11,7 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <LinkContainer to="/">
+          <LinkContainer to="/posts">
             <Nav.Link>Home</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/login">
@@ -20,9 +20,9 @@ const NavBar = () => {
           <LinkContainer to="/register">
             <Nav.Link>Register</Nav.Link>
           </LinkContainer>
-          <LinkContainer to={'/posts'}>
+          {/* <LinkContainer to={'/posts'}>
             <Nav.Link>Posts</Nav.Link>
-          </LinkContainer>
+          </LinkContainer> */}
           <LinkContainer to="/posts/new">
             <Nav.Link>Create Post</Nav.Link>
           </LinkContainer>

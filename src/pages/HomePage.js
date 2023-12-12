@@ -16,14 +16,14 @@ const HomePage = () => {
             try {
             const res = await axios.get(`http://localhost:2121/posts`) 
 
-            // console.log('DB Response:', res.data)
-            // setPosts(res.data)  
-            // console.log('Posts state:', posts)
-            const processedPosts = assignTimeOfDay(res.data)
-            const postsTimeOfDay = assignTimeOfDay(posts)
+            console.log('DB Response:', res.data)
+            setPosts(res.data)  
+            console.log('Posts state:', posts)
+
+            const postsTimeOfDay = assignTimeOfDay(res.data)
             const postsGroupedByDay = groupByDay(postsTimeOfDay)
             const postsGroupedByWeek = groupByWeek(postsGroupedByDay)
-            setPosts(processedPosts)
+            setPosts(postsGroupedByWeek)
             
             
         } catch (error) {

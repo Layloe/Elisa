@@ -634,7 +634,18 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 -left off on HomePage, make sure to revert changes
 -check map in PostsDisplay
 -console logs/ 
--all
+-all to check for errors
+
+2023-12-09
+-feeling a bit lost, I need to add the rest of my helper functions to include a time so I could test the data/days
+-should I nuke some componenets
+-I know UI I want to choose the time and date but can't remember the app I used it on
+-need to get to a point where I could see the posts so I can test the days and rendering of possible weeks
+-find othe apps and try to deconstruct what the did
+
+2023-12-12
+-debuging day error
+-changing date/time inpust
 
 
 
