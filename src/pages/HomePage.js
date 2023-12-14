@@ -17,13 +17,22 @@ const HomePage = () => {
             const res = await axios.get(`http://localhost:2121/posts`) 
 
             console.log('DB Response:', res.data)
-            setPosts(res.data)  
-            console.log('Posts state:', posts)
+            // setPosts(res.data)  
+            // console.log('Posts state:', posts)
 
             const postsTimeOfDay = assignTimeOfDay(res.data)
             const postsGroupedByDay = groupByDay(postsTimeOfDay)
             const postsGroupedByWeek = groupByWeek(postsGroupedByDay)
-            setPosts(postsGroupedByWeek)
+
+            const completeWeeks = postsGroupedByWeek.map(week => {
+                const fullWeek = Array(7).fill(null)
+                week.forEach(day => {
+                    const dayIndex = new Date(day[0].date).getDay()
+                    fullWeek[dayIndex] = day
+                })
+                return fullWeek
+            })
+            setPosts(completeWeeks)
             
             
         } catch (error) {

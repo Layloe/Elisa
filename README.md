@@ -646,6 +646,18 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 2023-12-12
 -debuging day error
 -changing date/time inpust
+-timeOfDay - drop down menu: morning/afternoon/evening
+-check the data processing to possibly include the rest of the functions
+-build out a test week
+
+2023-12-14
+-testing to display a full week
+-revisit helper functions
+-compare the functions to see what works best
+-review todays changes after reviewing helperFunctions
+
+ 
+
 
 
 

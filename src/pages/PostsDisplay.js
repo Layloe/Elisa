@@ -10,6 +10,8 @@ const PostsDisplay = ({ posts, onDelete, onLogout }) => {
                 <Row key={`week-${weekIndex}`}>
                     {week.map((day, dayIndex) => (
                         <Col key={`day-${dayIndex}`} md={4}>
+                            {day ? (
+                                <>
                             <h3>{day[0].dayOfWeek}</h3>
                             {day.map((post, postIndex) => (
                                 <Card key={`posts-${postIndex}`} className="mb-3">
@@ -26,6 +28,10 @@ const PostsDisplay = ({ posts, onDelete, onLogout }) => {
 
                                 </Card>
                             ))} 
+                            </>
+                            ) : (
+                                <h3>No posts fot this day</h3>
+                            )}
                         </Col>
                     ))}
                 </Row>
