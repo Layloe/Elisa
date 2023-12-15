@@ -655,6 +655,12 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 -revisit helper functions
 -compare the functions to see what works best
 -review todays changes after reviewing helperFunctions
+-uncomment out last function
+
+2023-12-15
+-create blood pressure componet
+-moving things around and testing bit
+-pick up blood pressure componet and homepage
 
  
 

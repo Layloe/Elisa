@@ -89,23 +89,24 @@ export function groupByWeek(list) {
 
 
 
-// function BloodPressureTracker({ data }) {
-//   const [selectedWeekIndex, setSelectedWeekIndex] = useState(0);
+export function BloodPressureTracker({ data }) {
+  const [selectedWeekIndex, setSelectedWeekIndex] = useState(0);
 
-//   const dateProp = assignDayOfWeek(data);
-//   const timeOf = assignTimeOfDay(dateProp);
-//   const groupedByDay = groupByDay(timeOf);
-//   const groupedByWeek = groupByWeek(groupedByDay);
+  const dateProp = assignDayOfWeek(data);
+  const timeOf = assignTimeOfDay(dateProp);
+  const groupedByDay = groupByDay(timeOf);
+  const groupedByWeek = groupByWeek(groupedByDay);
 
-//   const selectedWeek = groupedByWeek[selectedWeekIndex];
+  const selectedWeek = groupedByWeek[selectedWeekIndex];
 
-//   const handlePrevWeek = () => {
-//     setSelectedWeekIndex(selectedWeekIndex - 1);
-//   };
+  const handlePrevWeek = () => {
+    setSelectedWeekIndex(selectedWeekIndex - 1);
+  };
 
-//   const handleNextWeek = () => {
-//     setSelectedWeekIndex(selectedWeekIndex + 1);
-//   };
+  const handleNextWeek = () => {
+    setSelectedWeekIndex(selectedWeekIndex + 1);
+  }
+}
 
 //   return (
 //     <div>
