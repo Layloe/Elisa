@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { getDayOfWeek, getTimeOfDay, assignDayOfWeek, assignTimeOfDay, groupByDay, groupByWeek } from './helperFunctions'
 import PostsDisplay from './PostsDisplay'
+import { BloodPressureTracker } from "./helperFunctions";
 import { Link } from "react-router-dom";
 import { Card, Button, Container, Row, Col } from 'react-bootstrap'
 
