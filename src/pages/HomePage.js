@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import { getDayOfWeek, getTimeOfDay, assignDayOfWeek, assignTimeOfDay, groupByDay, groupByWeek } from './helperFunctions'
 import PostsDisplay from './PostsDisplay'
-import { BloodPressureTracker } from "./helperFunctions";
+import BloodPressureTracker from "./BloodPressureTracker";
 import { Link } from "react-router-dom";
 import { Card, Button, Container, Row, Col } from 'react-bootstrap'
 
@@ -22,8 +22,11 @@ const HomePage = () => {
             // console.log('Posts state:', posts)
 
             const postsTimeOfDay = assignTimeOfDay(res.data)
+            console.log('Posts after assignTimeOfDay:', postsTimeOfDay)
             const postsGroupedByDay = groupByDay(postsTimeOfDay)
+            console.log('Posts after groupByDay:', postsGroupedByDay)
             const postsGroupedByWeek = groupByWeek(postsGroupedByDay)
+            console.log('Posts after groupByWeek:', postsGroupedByWeek)
 
             const completeWeeks = postsGroupedByWeek.map(week => {
                 const fullWeek = Array(7).fill(null)
@@ -64,9 +67,12 @@ const HomePage = () => {
 
     return(
       <div>
+        {console.log('rendering posts:', posts)}
+        {posts && posts.length > 0 && (
+        <BloodPressureTracker data={posts} onDelete={handleDelete} />
+        )}
         <PostsDisplay
           posts={posts}
-          onDelete={handleDelete}
           onLogout={handleLogout}
         />
       </div>

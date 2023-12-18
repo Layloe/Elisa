@@ -63,28 +63,36 @@ export function groupByDay(list) {
 
 export function groupByWeek(list) {
   const weeks = [];
-  let currentWeek = [];
+  let currentWeek = new Array(7).fill([])
 
-  for (let i = 0; i < list.length; i++) {
-    const currentDate = new Date(list[i][0].date);
-    const dayOfWeek = currentDate.getUTCDay();
+  list.forEach(dayGroup => {
+    const dayOfWeekIndex = new Date(dayGroup[0].date).getDay()
+    currentWeek[dayOfWeekIndex] = dayGroup
+  })
 
-    if (dayOfWeek === 0 && currentWeek.length > 0 ) {
-      // End of the week
-      weeks.push(currentWeek);
-      currentWeek = [];
-    }
+  weeks.push(currentWeek)
+  return weeks
 
-    currentWeek.push(list[i]);
+  // for (let i = 0; i < list.length; i++) {
+  //   const currentDate = new Date(list[i][0].date);
+  //   const dayOfWeek = currentDate.getUTCDay();
 
-    if (dayOfWeek === 6 || i === list.length - 1) {
-      // Saturday or last element of the list
-      weeks.push(currentWeek);
-      currentWeek = [];
-    }
-  }
+  //   if (dayOfWeek === 0 && currentWeek.length > 0 ) {
+  //     // End of the week
+  //     weeks.push(currentWeek);
+  //     currentWeek = [];
+  //   }
 
-  return weeks;
+  //   currentWeek.push(list[i]);
+
+  //   if (dayOfWeek === 6 || i === list.length - 1) {
+  //     // Saturday or last element of the list
+  //     weeks.push(currentWeek);
+  //     currentWeek = [];
+  //   }
+  // }
+
+  // return weeks;
 }
 
 

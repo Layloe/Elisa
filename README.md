@@ -662,6 +662,10 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 -moving things around and testing bit
 -pick up blood pressure componet and homepage
 
+2023-12-18
+-look into _id issue
+
+
  
 
 
