@@ -4,6 +4,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Form, Button, Container } from 'react-bootstrap'
 
 const EditPostPage = () => {
+  const {id} = useParams()
+  const navigate = useNavigate()
+  
     const [post, setPost] = useState({
         timeOfDay: '',
         bloodPressure: '',
@@ -13,8 +16,7 @@ const EditPostPage = () => {
         date: ''
     })
 
-    const {id} = useParams()
-    const navigate = useNavigate()
+
 
     useEffect(() => {
         const fetchPost = async () => {

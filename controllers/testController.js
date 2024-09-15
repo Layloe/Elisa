@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 const ticketList = require('../models/ticketlist');
 
 
@@ -53,13 +54,20 @@ exports.createPost = async (req, res) => {
 
 // Get a specific post by ID
 exports.getPostById = async (req, res) => {
+  const { id } = req.params
   console.log('req id:', req.params.id)
+
+  // Validate objectId
+  if (!mongoose.Types.ObjectId.isValid(is)) {
+    return res.status(400).json({error: "Invalid post ID"})
+  }
+
   try {
-    const post = await ticketList.findById(req.params.id);
+    const post = await ticketList.findById(id);
     if (!post) {
       return res.status(404).json({ error: 'Post not found' });
     }
-    res.send(post);
+    res.json(post)
   } catch (error) {
     console.error('Error fetching post by ID:', error);
     res.status(500).json({ error: 'Internal server error' });

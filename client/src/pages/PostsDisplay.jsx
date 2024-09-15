@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const PostsDisplay = ({ posts, onDelete, onLogout }) => {
     console.log('PostsDisplay props:', posts)
@@ -22,6 +23,7 @@ const PostsDisplay = ({ posts, onDelete, onLogout }) => {
                                     <Card.Text>Status: {post.status}</Card.Text>
                                     <Card.Text>Date: {new Date (post.date).toLocaleDateString()}</Card.Text>
                                     <Button variant="danger" onClick={() => onDelete(post._id)}>Delete</Button>
+                                    <Button variant="primary" as={Link} to={`/posts/edit/${post._id}`}>Edit</Button>
                                     {/* <Button variant="warning" onClick={() => onLogout(user._id) }>Logout</Button> */}
                                     </Card.Body>
 

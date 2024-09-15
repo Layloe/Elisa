@@ -1,34 +1,18 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
-      <LinkContainer to="/">
-        <Navbar.Brand>Elisa Soon!</Navbar.Brand>
-      </LinkContainer>
+      <Navbar.Brand as={Link} to="/">Elisa Soon!</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <LinkContainer to="/posts">
-            <Nav.Link>Home</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/login">
-            <Nav.Link>Login</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/register">
-            <Nav.Link>Register</Nav.Link>
-          </LinkContainer>
-          {/* <LinkContainer to={'/posts'}>
-            <Nav.Link>Posts</Nav.Link>
-          </LinkContainer> */}
-          <LinkContainer to="/posts/new">
-            <Nav.Link>Create Post</Nav.Link>
-          </LinkContainer>
-          <LinkContainer to="/posts/edit/:id">
-            <Nav.Link>Edit Post</Nav.Link>
-          </LinkContainer>
+          <Nav.Link as={Link} to="/posts">Home</Nav.Link>
+          <Nav.Link as={Link} to="/login">Login</Nav.Link>
+          <Nav.Link as={Link} to="/register">Register</Nav.Link>
+          <Nav.Link as={Link} to="/posts/new">Create Post</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
@@ -36,3 +20,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+
