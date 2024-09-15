@@ -664,6 +664,15 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 
 2023-12-18
 -look into _id issue
+-carpet bombed console logs to fix a bagillion errors
+-need to fix data processing errors that have null
+-posts still not populating with some of the data
+-need dummy data to test functions
+
+2023-12-20
+-have a cold so I'm mainly thinking about the app 
+-pick up at helperFuctions 
+ 
 
 
  
