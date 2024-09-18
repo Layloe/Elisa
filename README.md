@@ -672,7 +672,17 @@ intigrate helperFunctions.js and PostsDisplay.js into HomePage
 2023-12-20
 -have a cold so I'm mainly thinking about the app 
 -pick up at helperFuctions 
- 
+---------------------------------------------------
+2024-09-15
+-rebooting the Elisa build
+-updated navbar errors 
+-evaluation of app
+-api up and running 
+
+2024-09-18
+-thinking of ways to simplify app
+-need to fix display dups
+-retrieve data from DB 
 
 
  
